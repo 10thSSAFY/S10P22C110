@@ -27,3 +27,9 @@ def listener():
 
 if __name__ == '__main__':
     listener()
+
+'''
+터미널 1: roscore
+
+터미널 3: rosrun ssafy_1 listener.py
+'''

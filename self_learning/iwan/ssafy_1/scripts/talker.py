@@ -41,3 +41,10 @@ if __name__ == '__main__':
         talker()
     except rospy.ROSInterruptException:
         pass
+
+
+'''
+터미널 1: roscore
+
+터미널 2: rosrun ssafy_1 talker.py
+'''
