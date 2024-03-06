@@ -264,3 +264,7 @@ vi Imu.msg
 rosrun ssafy_1 get_gps.py
 ls
 vi Imu.msg
+rosrun ssafy_1 listener.py 
+cd catkin_ws/
+ls
+rosrun ssafy_1 talker.py 
