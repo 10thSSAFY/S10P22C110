@@ -22,13 +22,16 @@ def listener():
     rospy.init_node('my_name_listener', anonymous=True)
 
     #TODO: (2) Subscriber 생성
-    '''
     # student 라는 직접 만든 Custom ROS 메세지 형식을 사용하여 Topic Subscriber 를 완성한다.
     # Topic 이름은 'my_name' 으로 설정한다.
-    rospy.Subscriber( 변수 1 , 변수 2 , callback)
-    
-    '''
+    rospy.Subscriber('my_name', student, callback)
     rospy.spin()
 
 if __name__ == '__main__':
     listener()
+
+'''
+터미널 1: roscore
+
+터미널 3: rosrun ssafy_1 my_name_listener.py
+'''
