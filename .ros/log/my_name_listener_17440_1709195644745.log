@@ -1,0 +1,542 @@
+[rospy.client][INFO] 2024-02-29 17:34:04,771: init_node, name[/my_name_listener_17440_1709195644745], pid[17440]
+[xmlrpc][INFO] 2024-02-29 17:34:04,772: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-02-29 17:34:04,772: Started XML-RPC server [http://DESKTOP-LL832F4:35025/]
+[rospy.init][INFO] 2024-02-29 17:34:04,773: ROS Slave URI: [http://DESKTOP-LL832F4:35025/]
+[rospy.impl.masterslave][INFO] 2024-02-29 17:34:04,773: _ready: http://DESKTOP-LL832F4:35025/
+[xmlrpc][INFO] 2024-02-29 17:34:04,775: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-02-29 17:34:04,775: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2024-02-29 17:34:04,874: registered with master
+[rospy.rosout][INFO] 2024-02-29 17:34:04,874: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-02-29 17:34:04,878: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-02-29 17:34:04,880: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2024-02-29 17:34:05,161: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2024-02-29 17:34:13,896: topic[/ssafy] adding connection to [http://DESKTOP-LL832F4:44467/], count 0
+[rosout][INFO] 2024-02-29 17:34:13,964: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:14,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:15,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:16,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:17,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:18,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:19,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:20,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:21,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:22,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:23,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:24,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:25,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:26,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:27,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:28,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:29,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:30,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:31,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:32,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:33,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:34,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:35,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:36,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:37,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:38,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:39,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:40,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:41,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:42,967: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:43,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:44,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:45,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:46,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:47,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:48,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:49,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:50,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:51,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:52,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:53,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:54,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:55,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:56,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:57,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:58,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:34:59,967: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:00,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:01,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:02,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:03,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:04,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:05,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:06,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:07,967: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:08,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:09,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:10,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:11,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:12,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:13,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:14,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:15,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:16,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:17,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:18,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:19,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:20,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:21,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:22,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:23,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:24,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:25,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:26,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:27,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:28,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:29,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:30,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:31,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:32,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:33,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:34,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:35,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:36,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:37,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:38,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:39,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:40,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:41,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:42,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:43,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:44,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:45,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:46,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:47,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:48,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:49,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:50,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:51,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:52,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:53,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:54,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:55,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:56,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:57,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:58,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:35:59,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:00,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:01,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:02,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:03,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:04,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:05,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:06,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:07,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:08,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:09,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:10,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:11,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:12,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:13,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:14,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:15,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:16,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:17,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:18,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:19,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:20,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:21,966: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:22,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rosout][INFO] 2024-02-29 17:36:23,965: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rospy.internal][INFO] 2024-02-29 17:36:24,175: topic[/ssafy] removing connection to http://DESKTOP-LL832F4:44467/
+[rospy.core][INFO] 2024-02-29 17:36:25,896: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-02-29 17:36:25,898: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-02-29 17:36:25,898: signal-2
+[rospy.core][INFO] 2024-02-29 17:36:26,031: signal_shutdown [atexit]

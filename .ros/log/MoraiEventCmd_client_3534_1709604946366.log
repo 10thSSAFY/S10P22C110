@@ -1,0 +1,996 @@
+[rospy.client][INFO] 2024-03-05 11:15:46,391: init_node, name[/MoraiEventCmd_client_3534_1709604946366], pid[3534]
+[xmlrpc][INFO] 2024-03-05 11:15:46,392: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-05 11:15:46,392: Started XML-RPC server [http://DESKTOP-LL832F4:35545/]
+[rospy.impl.masterslave][INFO] 2024-03-05 11:15:46,392: _ready: http://DESKTOP-LL832F4:35545/
+[xmlrpc][INFO] 2024-03-05 11:15:46,393: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2024-03-05 11:15:46,393: ROS Slave URI: [http://DESKTOP-LL832F4:35545/]
+[rospy.registration][INFO] 2024-03-05 11:15:46,394: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2024-03-05 11:15:46,495: registered with master
+[rospy.rosout][INFO] 2024-03-05 11:15:46,495: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-05 11:15:46,498: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-05 11:15:46,499: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-03-05 11:15:46,516: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604946
+        nsecs: 514000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rospy.internal][INFO] 2024-03-05 11:15:46,711: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-05 11:15:47,517: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604947
+        nsecs: 515000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:48,516: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604948
+        nsecs: 512000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:49,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604949
+        nsecs: 518000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:50,523: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604950
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:51,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604951
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:52,524: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604952
+        nsecs: 521000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:53,527: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604953
+        nsecs: 525000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:54,519: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604954
+        nsecs: 516000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:55,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604955
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:56,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604956
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:57,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604957
+        nsecs: 513000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:58,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604958
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:15:59,525: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604959
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:00,527: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604960
+        nsecs: 526000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:01,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604961
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:02,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604962
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:03,526: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604963
+        nsecs: 524000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:04,524: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604964
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:05,524: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604965
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:06,526: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604966
+        nsecs: 524000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:07,526: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604967
+        nsecs: 524000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:08,525: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604968
+        nsecs: 523000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:09,524: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604969
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:10,520: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604970
+        nsecs: 516000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:11,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604971
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:12,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604972
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:13,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604973
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:14,520: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604974
+        nsecs: 518000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:15,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604975
+        nsecs: 512000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:16,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604976
+        nsecs: 512000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:17,519: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604977
+        nsecs: 517000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:18,513: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604978
+        nsecs: 510000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:19,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604979
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:20,516: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604980
+        nsecs: 514000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:21,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604981
+        nsecs: 518000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:22,518: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604982
+        nsecs: 516000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:23,514: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604983
+        nsecs: 511000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:24,514: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604984
+        nsecs: 511000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:25,519: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604985
+        nsecs: 517000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:26,520: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604986
+        nsecs: 518000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:27,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604987
+        nsecs: 514000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:28,527: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604988
+        nsecs: 525000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:29,524: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604989
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:30,523: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604990
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:31,524: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604991
+        nsecs: 522000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:32,513: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604992
+        nsecs: 511000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:33,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604993
+        nsecs: 513000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:34,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604994
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:35,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604995
+        nsecs: 513000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:36,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604996
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:37,520: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604997
+        nsecs: 518000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:38,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604998
+        nsecs: 513000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:39,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604999
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:40,527: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605000
+        nsecs: 524000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:41,522: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605001
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:42,517: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605002
+        nsecs: 515000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:43,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605003
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:44,520: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605004
+        nsecs: 518000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:45,523: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605005
+        nsecs: 521000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:46,512: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605006
+        nsecs: 510000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:47,523: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605007
+        nsecs: 520000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:48,518: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605008
+        nsecs: 515000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:49,515: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605009
+        nsecs: 513000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:50,516: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605010
+        nsecs: 514000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:51,514: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605011
+        nsecs: 511000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:52,521: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605012
+        nsecs: 519000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:53,518: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605013
+        nsecs: 515000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:54,529: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605014
+        nsecs: 526000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:16:55,536: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709605015
+        nsecs: 533000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rospy.core][INFO] 2024-03-05 11:16:55,961: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-05 11:16:55,963: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-03-05 11:16:55,963: signal-2
+[rospy.core][INFO] 2024-03-05 11:16:56,095: signal_shutdown [atexit]

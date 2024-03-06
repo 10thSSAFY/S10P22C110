@@ -1,0 +1,673 @@
+[rospy.client][INFO] 2024-03-04 14:01:10,426: init_node, name[/Ego_Control_Command_10952_1709528470403], pid[10952]
+[xmlrpc][INFO] 2024-03-04 14:01:10,426: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-04 14:01:10,427: Started XML-RPC server [http://DESKTOP-LL832F4:45427/]
+[rospy.init][INFO] 2024-03-04 14:01:10,427: ROS Slave URI: [http://DESKTOP-LL832F4:45427/]
+[rospy.impl.masterslave][INFO] 2024-03-04 14:01:10,427: _ready: http://DESKTOP-LL832F4:45427/
+[xmlrpc][INFO] 2024-03-04 14:01:10,428: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-03-04 14:01:10,429: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2024-03-04 14:01:10,429: Registering publisher topic [/ctrl_cmd] type [morai_msgs/CtrlCmd] with master
+[rospy.init][INFO] 2024-03-04 14:01:10,528: registered with master
+[rospy.rosout][INFO] 2024-03-04 14:01:10,528: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-04 14:01:10,529: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-04 14:01:10,530: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-03-04 14:01:10,533: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rospy.internal][INFO] 2024-03-04 14:01:10,556: topic[/ctrl_cmd] adding connection to [/rosbridge_websocket], count 0
+[rospy.internal][INFO] 2024-03-04 14:01:10,809: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-04 14:01:11,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:12,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:13,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:14,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:15,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:16,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:17,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:18,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:19,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:20,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:21,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:22,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:23,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:24,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:25,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:26,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:27,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:28,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:29,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:30,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:31,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:32,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:33,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:34,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:35,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:36,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:37,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:38,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:39,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:40,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:41,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:42,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:43,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:44,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:45,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:46,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:47,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:48,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:49,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:50,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:51,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:52,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:53,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:54,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:55,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:56,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:57,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:58,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:01:59,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:00,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:01,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:02,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:03,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:04,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:05,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:06,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:07,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:08,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:09,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:10,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:11,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:12,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:13,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:14,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:15,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:16,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:17,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:18,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:19,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:20,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:21,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:22,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:23,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:24,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:25,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:26,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:27,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:28,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:29,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:30,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:31,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:32,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:33,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:34,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:35,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:36,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:37,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:38,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:39,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:40,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:41,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:42,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:43,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:44,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:45,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:46,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:47,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:48,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:49,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:50,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:51,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:52,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:53,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:54,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:55,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:56,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:57,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:02:58,534: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rospy.core][INFO] 2024-03-04 14:02:58,633: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-04 14:02:58,634: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2024-03-04 14:02:58,635: topic[/ctrl_cmd] removing connection to /rosbridge_websocket
+[rospy.impl.masterslave][INFO] 2024-03-04 14:02:58,635: signal-2
+[rospy.core][INFO] 2024-03-04 14:02:58,737: signal_shutdown [atexit]

@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2024-03-05 13:43:42,547: init_node, name[/camera_img_6255_1709613822523], pid[6255]
+[xmlrpc][INFO] 2024-03-05 13:43:42,548: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-05 13:43:42,548: Started XML-RPC server [http://DESKTOP-LL832F4:35199/]
+[rospy.impl.masterslave][INFO] 2024-03-05 13:43:42,548: _ready: http://DESKTOP-LL832F4:35199/
+[xmlrpc][INFO] 2024-03-05 13:43:42,549: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2024-03-05 13:43:42,549: ROS Slave URI: [http://DESKTOP-LL832F4:35199/]
+[rospy.registration][INFO] 2024-03-05 13:43:42,550: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2024-03-05 13:43:42,651: registered with master
+[rospy.rosout][INFO] 2024-03-05 13:43:42,651: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-05 13:43:42,654: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-05 13:43:42,655: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2024-03-05 13:43:42,668: topic[/image_jpeg/compressed] adding connection to [http://DESKTOP-LL832F4:33053/], count 0
+[rospy.internal][INFO] 2024-03-05 13:43:42,916: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2024-03-05 13:45:30,423: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-05 13:45:30,425: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2024-03-05 13:45:30,425: topic[/image_jpeg/compressed] removing connection to http://DESKTOP-LL832F4:33053/
+[rospy.impl.masterslave][INFO] 2024-03-05 13:45:30,426: signal-2
+[rospy.core][INFO] 2024-03-05 13:45:30,527: signal_shutdown [atexit]

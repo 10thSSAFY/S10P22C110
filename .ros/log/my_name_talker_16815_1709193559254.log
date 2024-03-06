@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2024-02-29 16:59:19,283: init_node, name[/my_name_talker_16815_1709193559254], pid[16815]
+[xmlrpc][INFO] 2024-02-29 16:59:19,283: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-02-29 16:59:19,284: Started XML-RPC server [http://DESKTOP-LL832F4:34969/]
+[rospy.init][INFO] 2024-02-29 16:59:19,284: ROS Slave URI: [http://DESKTOP-LL832F4:34969/]
+[rospy.impl.masterslave][INFO] 2024-02-29 16:59:19,284: _ready: http://DESKTOP-LL832F4:34969/
+[xmlrpc][INFO] 2024-02-29 16:59:19,285: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-02-29 16:59:19,286: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2024-02-29 16:59:19,286: Registering publisher topic [/talker] type [std_msgs/String] with master
+[rospy.init][INFO] 2024-02-29 16:59:19,385: registered with master
+[rospy.rosout][INFO] 2024-02-29 16:59:19,385: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-02-29 16:59:19,386: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-02-29 16:59:19,387: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-02-29 16:59:19,389: 
+ my name : miseong park 
+ my age : 25 
+ SSAFY score : 90
+[rospy.core][INFO] 2024-02-29 16:59:19,391: signal_shutdown [atexit]
+[rospy.impl.masterslave][INFO] 2024-02-29 16:59:19,394: atexit

@@ -1,0 +1,21 @@
+[rosmaster.main][INFO] 2024-02-29 16:42:54,796: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2024-02-29 16:42:54,797: Starting ROS Master Node
+[xmlrpc][INFO] 2024-02-29 16:42:54,798: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2024-02-29 16:42:54,798: Started XML-RPC server [http://DESKTOP-LL832F4:11311/]
+[rosmaster.master][INFO] 2024-02-29 16:42:54,798: Master initialized: port[11311], uri[http://DESKTOP-LL832F4:11311/]
+[xmlrpc][INFO] 2024-02-29 16:42:54,799: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2024-02-29 16:42:54,904: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2024-02-29 16:42:54,906: +PARAM [/roslaunch/uris/host_desktop_ll832f4__36695] by /roslaunch
+[rosmaster.master][INFO] 2024-02-29 16:42:54,950: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2024-02-29 16:42:54,951: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2024-02-29 16:42:54,959: +SERVICE [/rosout/get_loggers] /rosout http://DESKTOP-LL832F4:38547/
+[rosmaster.master][INFO] 2024-02-29 16:42:54,960: +SERVICE [/rosout/set_logger_level] /rosout http://DESKTOP-LL832F4:38547/
+[rosmaster.master][INFO] 2024-02-29 16:42:54,960: +PUB [/rosout_agg] /rosout http://DESKTOP-LL832F4:38547/
+[rosmaster.master][INFO] 2024-02-29 16:42:54,962: +SUB [/rosout] /rosout http://DESKTOP-LL832F4:38547/
+[rosmaster.master][INFO] 2024-02-29 16:51:21,246: +PUB [/rosout] /my_name_talker_16136_1709193081117 http://DESKTOP-LL832F4:33131/
+[rosmaster.master][INFO] 2024-02-29 16:51:21,249: +SERVICE [/my_name_talker_16136_1709193081117/get_loggers] /my_name_talker_16136_1709193081117 http://DESKTOP-LL832F4:33131/
+[rosmaster.master][INFO] 2024-02-29 16:51:21,250: +SERVICE [/my_name_talker_16136_1709193081117/set_logger_level] /my_name_talker_16136_1709193081117 http://DESKTOP-LL832F4:33131/
+[rosmaster.master][INFO] 2024-02-29 16:51:21,252: -PUB [/rosout] /my_name_talker_16136_1709193081117 http://DESKTOP-LL832F4:33131/
+[rosmaster.master][INFO] 2024-02-29 16:51:21,252: -SERVICE [/my_name_talker_16136_1709193081117/set_logger_level] /my_name_talker_16136_1709193081117 rosrpc://DESKTOP-LL832F4:41623
+[rosmaster.master][INFO] 2024-02-29 16:51:21,252: -SERVICE [/my_name_talker_16136_1709193081117/get_loggers] /my_name_talker_16136_1709193081117 rosrpc://DESKTOP-LL832F4:41623
+[rosmaster.master][INFO] 2024-02-29 16:51:21,283: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:38547/ ['http://DESKTOP-LL832F4:33131/']

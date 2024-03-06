@@ -1,0 +1,223 @@
+[rospy.client][INFO] 2024-03-04 14:03:33,713: init_node, name[/Ego_Control_Command_10995_1709528613690], pid[10995]
+[xmlrpc][INFO] 2024-03-04 14:03:33,714: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-04 14:03:33,714: Started XML-RPC server [http://DESKTOP-LL832F4:42639/]
+[rospy.impl.masterslave][INFO] 2024-03-04 14:03:33,715: _ready: http://DESKTOP-LL832F4:42639/
+[rospy.init][INFO] 2024-03-04 14:03:33,715: ROS Slave URI: [http://DESKTOP-LL832F4:42639/]
+[xmlrpc][INFO] 2024-03-04 14:03:33,716: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-03-04 14:03:33,717: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2024-03-04 14:03:33,717: Registering publisher topic [/ctrl_cmd] type [morai_msgs/CtrlCmd] with master
+[rospy.internal][INFO] 2024-03-04 14:03:33,778: topic[/ctrl_cmd] adding connection to [/rosbridge_websocket], count 0
+[rospy.init][INFO] 2024-03-04 14:03:33,816: registered with master
+[rospy.rosout][INFO] 2024-03-04 14:03:33,816: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-04 14:03:33,817: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-04 14:03:33,818: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-03-04 14:03:33,820: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rospy.internal][INFO] 2024-03-04 14:03:33,971: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-04 14:03:34,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:35,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:36,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:37,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:38,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:39,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:40,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:41,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:42,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:43,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:44,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:45,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:46,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:47,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:48,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:49,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:50,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:51,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:52,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:53,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:54,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:55,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:56,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:57,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:58,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:03:59,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:00,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:01,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:02,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:03,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:04,821: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:05,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rosout][INFO] 2024-03-04 14:04:06,822: longlCmdType: 1
+accel: 1.0
+brake: 0.0
+steering: 0.0
+velocity: 0.0
+acceleration: 0.0
+[rospy.core][INFO] 2024-03-04 14:04:07,123: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-04 14:04:07,125: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2024-03-04 14:04:07,125: topic[/ctrl_cmd] removing connection to /rosbridge_websocket
+[rospy.impl.masterslave][INFO] 2024-03-04 14:04:07,125: signal-2
+[rospy.core][INFO] 2024-03-04 14:04:07,257: signal_shutdown [atexit]
