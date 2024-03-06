@@ -1,0 +1,61 @@
+[rosmaster.main][INFO] 2024-03-04 01:33:44,082: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2024-03-04 01:33:44,082: Starting ROS Master Node
+[xmlrpc][INFO] 2024-03-04 01:33:44,083: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2024-03-04 01:33:44,084: Started XML-RPC server [http://DESKTOP-LL832F4:11311/]
+[rosmaster.master][INFO] 2024-03-04 01:33:44,084: Master initialized: port[11311], uri[http://DESKTOP-LL832F4:11311/]
+[xmlrpc][INFO] 2024-03-04 01:33:44,084: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2024-03-04 01:33:44,090: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2024-03-04 01:33:44,091: +PARAM [/roslaunch/uris/host_desktop_ll832f4__40985] by /roslaunch
+[rosmaster.master][INFO] 2024-03-04 01:33:44,142: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2024-03-04 01:33:44,142: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2024-03-04 01:33:44,149: +SERVICE [/rosout/get_loggers] /rosout http://DESKTOP-LL832F4:40249/
+[rosmaster.master][INFO] 2024-03-04 01:33:44,151: +SERVICE [/rosout/set_logger_level] /rosout http://DESKTOP-LL832F4:40249/
+[rosmaster.master][INFO] 2024-03-04 01:33:44,152: +PUB [/rosout_agg] /rosout http://DESKTOP-LL832F4:40249/
+[rosmaster.master][INFO] 2024-03-04 01:33:44,155: +SUB [/rosout] /rosout http://DESKTOP-LL832F4:40249/
+[rosmaster.master][INFO] 2024-03-04 01:33:49,128: -SUB [/CollisionData] /Collision_listener_3160_1709483464393 http://DESKTOP-LL832F4:33881/
+[rosmaster.master][INFO] 2024-03-04 01:33:49,128: -PUB [/rosout] /Collision_listener_3160_1709483464393 http://DESKTOP-LL832F4:33881/
+[rosmaster.master][INFO] 2024-03-04 01:33:49,128: -SERVICE [/Collision_listener_3160_1709483464393/get_loggers] /Collision_listener_3160_1709483464393 rosrpc://DESKTOP-LL832F4:39271
+[rosmaster.master][INFO] 2024-03-04 01:33:49,129: -SERVICE [/Collision_listener_3160_1709483464393/set_logger_level] /Collision_listener_3160_1709483464393 rosrpc://DESKTOP-LL832F4:39271
+[rosmaster.master][INFO] 2024-03-04 01:33:56,012: +PUB [/rosout] /Collision_listener_3494_1709483635881 http://DESKTOP-LL832F4:44439/
+[rosmaster.master][INFO] 2024-03-04 01:33:56,014: +SERVICE [/Collision_listener_3494_1709483635881/get_loggers] /Collision_listener_3494_1709483635881 http://DESKTOP-LL832F4:44439/
+[rosmaster.master][INFO] 2024-03-04 01:33:56,015: +SERVICE [/Collision_listener_3494_1709483635881/set_logger_level] /Collision_listener_3494_1709483635881 http://DESKTOP-LL832F4:44439/
+[rosmaster.master][INFO] 2024-03-04 01:33:56,016: +SUB [/CollisionData] /Collision_listener_3494_1709483635881 http://DESKTOP-LL832F4:44439/
+[rosmaster.master][INFO] 2024-03-04 01:33:56,104: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ ['http://DESKTOP-LL832F4:44439/']
+[rosmaster.master][INFO] 2024-03-04 01:33:56,106: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ ['http://DESKTOP-LL832F4:44439/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-03-04 01:35:29,872: -SUB [/CollisionData] /Collision_listener_3494_1709483635881 http://DESKTOP-LL832F4:44439/
+[rosmaster.master][INFO] 2024-03-04 01:35:29,872: -PUB [/rosout] /Collision_listener_3494_1709483635881 http://DESKTOP-LL832F4:44439/
+[rosmaster.master][INFO] 2024-03-04 01:35:29,872: -SERVICE [/Collision_listener_3494_1709483635881/get_loggers] /Collision_listener_3494_1709483635881 rosrpc://DESKTOP-LL832F4:43433
+[rosmaster.master][INFO] 2024-03-04 01:35:29,872: -SERVICE [/Collision_listener_3494_1709483635881/set_logger_level] /Collision_listener_3494_1709483635881 rosrpc://DESKTOP-LL832F4:43433
+[rosmaster.master][INFO] 2024-03-04 01:35:29,874: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ []
+[rosmaster.master][INFO] 2024-03-04 01:35:29,875: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-03-04 01:35:31,926: +PUB [/rosout] /Collision_listener_3534_1709483731796 http://DESKTOP-LL832F4:37459/
+[rosmaster.master][INFO] 2024-03-04 01:35:31,928: +SERVICE [/Collision_listener_3534_1709483731796/get_loggers] /Collision_listener_3534_1709483731796 http://DESKTOP-LL832F4:37459/
+[rosmaster.master][INFO] 2024-03-04 01:35:31,929: +SERVICE [/Collision_listener_3534_1709483731796/set_logger_level] /Collision_listener_3534_1709483731796 http://DESKTOP-LL832F4:37459/
+[rosmaster.master][INFO] 2024-03-04 01:35:31,930: +SUB [/CollisionData] /Collision_listener_3534_1709483731796 http://DESKTOP-LL832F4:37459/
+[rosmaster.master][INFO] 2024-03-04 01:35:31,979: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ ['http://DESKTOP-LL832F4:37459/']
+[rosmaster.master][INFO] 2024-03-04 01:35:31,980: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ ['http://DESKTOP-LL832F4:37459/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-03-04 01:36:54,079: -SUB [/CollisionData] /Collision_listener_3534_1709483731796 http://DESKTOP-LL832F4:37459/
+[rosmaster.master][INFO] 2024-03-04 01:36:54,080: -PUB [/rosout] /Collision_listener_3534_1709483731796 http://DESKTOP-LL832F4:37459/
+[rosmaster.master][INFO] 2024-03-04 01:36:54,080: -SERVICE [/Collision_listener_3534_1709483731796/set_logger_level] /Collision_listener_3534_1709483731796 rosrpc://DESKTOP-LL832F4:34909
+[rosmaster.master][INFO] 2024-03-04 01:36:54,080: -SERVICE [/Collision_listener_3534_1709483731796/get_loggers] /Collision_listener_3534_1709483731796 rosrpc://DESKTOP-LL832F4:34909
+[rosmaster.master][INFO] 2024-03-04 01:36:54,132: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ []
+[rosmaster.master][INFO] 2024-03-04 01:36:54,132: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-03-04 01:36:55,666: +PUB [/rosout] /Collision_listener_3583_1709483815536 http://DESKTOP-LL832F4:34059/
+[rosmaster.master][INFO] 2024-03-04 01:36:55,668: +SERVICE [/Collision_listener_3583_1709483815536/get_loggers] /Collision_listener_3583_1709483815536 http://DESKTOP-LL832F4:34059/
+[rosmaster.master][INFO] 2024-03-04 01:36:55,669: +SERVICE [/Collision_listener_3583_1709483815536/set_logger_level] /Collision_listener_3583_1709483815536 http://DESKTOP-LL832F4:34059/
+[rosmaster.master][INFO] 2024-03-04 01:36:55,670: +SUB [/CollisionData] /Collision_listener_3583_1709483815536 http://DESKTOP-LL832F4:34059/
+[rosmaster.master][INFO] 2024-03-04 01:36:55,735: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ ['http://DESKTOP-LL832F4:34059/']
+[rosmaster.master][INFO] 2024-03-04 01:36:55,736: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ ['http://DESKTOP-LL832F4:34059/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-03-04 01:37:48,752: -SUB [/CollisionData] /Collision_listener_3583_1709483815536 http://DESKTOP-LL832F4:34059/
+[rosmaster.master][INFO] 2024-03-04 01:37:48,752: -PUB [/rosout] /Collision_listener_3583_1709483815536 http://DESKTOP-LL832F4:34059/
+[rosmaster.master][INFO] 2024-03-04 01:37:48,752: -SERVICE [/Collision_listener_3583_1709483815536/get_loggers] /Collision_listener_3583_1709483815536 rosrpc://DESKTOP-LL832F4:44293
+[rosmaster.master][INFO] 2024-03-04 01:37:48,752: -SERVICE [/Collision_listener_3583_1709483815536/set_logger_level] /Collision_listener_3583_1709483815536 rosrpc://DESKTOP-LL832F4:44293
+[rosmaster.master][INFO] 2024-03-04 01:37:48,836: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ []
+[rosmaster.master][INFO] 2024-03-04 01:37:48,837: publisherUpdate[/rosout] -> http://DESKTOP-LL832F4:40249/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2024-03-04 01:38:45,233: -PUB [/rosout_agg] /rosout http://DESKTOP-LL832F4:40249/
+[rosmaster.master][INFO] 2024-03-04 01:38:45,233: -SUB [/rosout] /rosout http://DESKTOP-LL832F4:40249/
+[rosmaster.master][INFO] 2024-03-04 01:38:45,234: -SERVICE [/rosout/get_loggers] /rosout rosrpc://DESKTOP-LL832F4:36629
+[rosmaster.master][INFO] 2024-03-04 01:38:45,234: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://DESKTOP-LL832F4:36629
+[rosmaster.main][INFO] 2024-03-04 01:38:45,321: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2024-03-04 01:38:45,322: stopping master...
+[rospy.core][INFO] 2024-03-04 01:38:45,322: signal_shutdown [atexit]

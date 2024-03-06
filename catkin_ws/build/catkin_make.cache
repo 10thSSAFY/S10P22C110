@@ -1,0 +1,2 @@
+MORAI-DriveExample_ROS/morai_standard:MORAI-ROS_morai_msgs:beginner_tutorials:ssafy_1:ssafy_2:ssafy_3
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles

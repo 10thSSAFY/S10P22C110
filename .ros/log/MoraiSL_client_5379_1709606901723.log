@@ -1,0 +1,178 @@
+[rospy.client][INFO] 2024-03-05 11:48:21,748: init_node, name[/MoraiSL_client_5379_1709606901723], pid[5379]
+[xmlrpc][INFO] 2024-03-05 11:48:21,749: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-05 11:48:21,749: Started XML-RPC server [http://DESKTOP-LL832F4:44961/]
+[rospy.init][INFO] 2024-03-05 11:48:21,750: ROS Slave URI: [http://DESKTOP-LL832F4:44961/]
+[rospy.impl.masterslave][INFO] 2024-03-05 11:48:21,750: _ready: http://DESKTOP-LL832F4:44961/
+[xmlrpc][INFO] 2024-03-05 11:48:21,751: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-03-05 11:48:21,751: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2024-03-05 11:48:21,850: registered with master
+[rospy.rosout][INFO] 2024-03-05 11:48:21,850: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-05 11:48:21,853: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-05 11:48:21,854: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-03-05 11:48:21,885: response: 
+  result: True
+[rospy.internal][INFO] 2024-03-05 11:48:22,122: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-05 11:48:22,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:23,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:24,882: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:25,873: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:26,883: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:27,876: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:28,877: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:29,873: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:30,884: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:31,945: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:32,889: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:33,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:34,884: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:35,871: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:36,880: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:37,875: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:38,876: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:39,883: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:40,891: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:41,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:42,883: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:43,873: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:44,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:45,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:46,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:47,884: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:48,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:49,879: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:50,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:51,879: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:52,888: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:53,889: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:54,882: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:55,878: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:56,873: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:57,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:58,871: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:48:59,882: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:00,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:01,877: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:02,879: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:03,888: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:04,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:05,885: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:06,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:07,875: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:08,876: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:09,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:10,884: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:11,883: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:12,878: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:13,878: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:14,879: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:15,871: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:16,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:17,926: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:18,885: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:19,872: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:20,881: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:21,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:22,880: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:23,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:24,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:25,883: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:26,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:27,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:28,878: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:29,883: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:30,878: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:31,879: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:32,891: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:33,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:34,911: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:35,874: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:36,873: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:37,875: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:38,887: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:39,879: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:40,886: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:49:41,876: response: 
+  result: True
+[rospy.core][INFO] 2024-03-05 11:49:42,850: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-05 11:49:42,851: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-03-05 11:49:42,852: signal-2
+[rospy.core][INFO] 2024-03-05 11:49:43,016: signal_shutdown [atexit]

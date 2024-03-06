@@ -1,0 +1,40 @@
+[rospy.client][INFO] 2024-03-05 11:56:33,164: init_node, name[/MoraiSL_client_5960_1709607393140], pid[5960]
+[xmlrpc][INFO] 2024-03-05 11:56:33,164: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-05 11:56:33,165: Started XML-RPC server [http://DESKTOP-LL832F4:33935/]
+[rospy.impl.masterslave][INFO] 2024-03-05 11:56:33,165: _ready: http://DESKTOP-LL832F4:33935/
+[rospy.init][INFO] 2024-03-05 11:56:33,165: ROS Slave URI: [http://DESKTOP-LL832F4:33935/]
+[rospy.registration][INFO] 2024-03-05 11:56:33,167: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2024-03-05 11:56:33,167: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2024-03-05 11:56:33,266: registered with master
+[rospy.rosout][INFO] 2024-03-05 11:56:33,267: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-05 11:56:33,269: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-05 11:56:33,270: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2024-03-05 11:56:33,538: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-05 11:56:43,278: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:56:53,288: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:57:03,296: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:57:13,306: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:57:23,316: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:57:33,326: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:57:43,335: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:57:53,342: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:58:03,349: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:58:13,356: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:58:23,363: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:58:33,371: response: 
+  result: True
+[rospy.core][INFO] 2024-03-05 11:58:41,608: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-05 11:58:41,610: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-03-05 11:58:41,610: signal-2
+[rospy.core][INFO] 2024-03-05 11:58:41,742: signal_shutdown [atexit]

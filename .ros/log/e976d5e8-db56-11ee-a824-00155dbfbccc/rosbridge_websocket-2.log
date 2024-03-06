@@ -1,0 +1,38 @@
+[rospy.client][INFO] 2024-03-06 10:14:44,232: init_node, name[/rosbridge_websocket], pid[2060]
+[xmlrpc][INFO] 2024-03-06 10:14:44,232: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-06 10:14:44,233: Started XML-RPC server [http://DESKTOP-LL832F4:37089/]
+[rospy.init][INFO] 2024-03-06 10:14:44,233: ROS Slave URI: [http://DESKTOP-LL832F4:37089/]
+[rospy.impl.masterslave][INFO] 2024-03-06 10:14:44,233: _ready: http://DESKTOP-LL832F4:37089/
+[xmlrpc][INFO] 2024-03-06 10:14:44,234: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-03-06 10:14:44,235: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2024-03-06 10:14:44,334: registered with master
+[rospy.rosout][INFO] 2024-03-06 10:14:44,334: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-06 10:14:44,336: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-06 10:14:44,337: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-03-06 10:14:44,348: Rosbridge WebSocket server started at ws://0.0.0.0:9090
+[rospy.internal][INFO] 2024-03-06 10:14:44,570: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-06 10:14:54,499: Client connected.  1 clients total.
+[rosout][INFO] 2024-03-06 10:14:56,840: [Client 0] Subscribed to /ctrl_cmd
+[rosout][INFO] 2024-03-06 10:15:04,400: Client connected.  2 clients total.
+[rosout][INFO] 2024-03-06 10:15:10,881: Client connected.  3 clients total.
+[rosout][INFO] 2024-03-06 10:15:19,800: Client connected.  4 clients total.
+[rospy.internal][INFO] 2024-03-06 10:15:51,855: topic[/gps] adding connection to [/gps_data_listener_2125_1709687751708], count 0
+[rospy.internal][INFO] 2024-03-06 10:16:43,368: topic[/gps] removing connection to /gps_data_listener_2125_1709687751708
+[rospy.internal][INFO] 2024-03-06 10:24:37,295: topic[/imu] adding connection to [/imu_data_listener_7341_1709688277145], count 0
+[rospy.internal][INFO] 2024-03-06 10:24:53,246: topic[/imu] removing connection to /imu_data_listener_7341_1709688277145
+[rospy.internal][INFO] 2024-03-06 10:27:02,819: topic[/imu] adding connection to [/imu_data_listener_8966_1709688422670], count 0
+[rospy.internal][INFO] 2024-03-06 10:27:16,520: topic[/imu] removing connection to /imu_data_listener_8966_1709688422670
+[rospy.internal][INFO] 2024-03-06 10:33:24,872: topic[/imu] adding connection to [/imu_data_listener_10384_1709688804723], count 0
+[rospy.internal][INFO] 2024-03-06 10:33:28,041: topic[/imu] removing connection to /imu_data_listener_10384_1709688804723
+[rospy.internal][INFO] 2024-03-06 10:33:51,610: topic[/imu] adding connection to [/imu_data_listener_10735_1709688831463], count 0
+[rospy.internal][INFO] 2024-03-06 10:33:55,611: topic[/imu] removing connection to /imu_data_listener_10735_1709688831463
+[rospy.internal][INFO] 2024-03-06 10:44:44,359: topic impl's ref count is zero, deleting topic /ctrl_cmd...
+[rosout][INFO] 2024-03-06 10:44:44,360: Client disconnected. 3 clients total.
+[rosout][INFO] 2024-03-06 10:44:44,361: [Client 0] Unsubscribed from /ctrl_cmd
+[rosout][INFO] 2024-03-06 10:44:44,828: Client disconnected. 2 clients total.
+[rosout][INFO] 2024-03-06 10:44:44,831: Client disconnected. 1 clients total.
+[rosout][INFO] 2024-03-06 10:44:44,834: Client disconnected. 0 clients total.
+[rospy.core][INFO] 2024-03-06 10:44:48,151: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-06 10:44:48,156: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-03-06 10:44:48,156: signal-2
+[rospy.core][INFO] 2024-03-06 10:44:48,272: signal_shutdown [atexit]

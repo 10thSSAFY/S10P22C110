@@ -1,0 +1,326 @@
+[rospy.client][INFO] 2024-03-05 11:02:06,760: init_node, name[/MoraiEventCmd_client_1703_1709604126738], pid[1703]
+[xmlrpc][INFO] 2024-03-05 11:02:06,761: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-05 11:02:06,761: Started XML-RPC server [http://DESKTOP-LL832F4:34379/]
+[rospy.init][INFO] 2024-03-05 11:02:06,762: ROS Slave URI: [http://DESKTOP-LL832F4:34379/]
+[rospy.impl.masterslave][INFO] 2024-03-05 11:02:06,762: _ready: http://DESKTOP-LL832F4:34379/
+[xmlrpc][INFO] 2024-03-05 11:02:06,763: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2024-03-05 11:02:06,763: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2024-03-05 11:02:06,862: registered with master
+[rospy.rosout][INFO] 2024-03-05 11:02:06,863: initializing /rosout core topic
+[rospy.registration][ERROR] 2024-03-05 11:02:06,864: [Errno 111] Connection refused
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+[rospy.rosout][INFO] 2024-03-05 11:02:36,759: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-05 11:02:36,760: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2024-03-05 11:02:36,995: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-05 11:02:50,973: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604170
+        nsecs: 963000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:51,930: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604171
+        nsecs: 928000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:52,927: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604172
+        nsecs: 925000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:53,940: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604173
+        nsecs: 938000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:54,940: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604174
+        nsecs: 938000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:55,931: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604175
+        nsecs: 929000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:56,938: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604176
+        nsecs: 937000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:57,930: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604177
+        nsecs: 928000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:58,936: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604178
+        nsecs: 934000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:02:59,929: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604179
+        nsecs: 928000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:00,936: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604180
+        nsecs: 934000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:01,928: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604181
+        nsecs: 926000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:02,929: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604182
+        nsecs: 928000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:03,936: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604183
+        nsecs: 934000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:04,934: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604184
+        nsecs: 933000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:05,932: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604185
+        nsecs: 930000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:06,940: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604186
+        nsecs: 938000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:07,935: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604187
+        nsecs: 934000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:08,928: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604188
+        nsecs: 926000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:09,929: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604189
+        nsecs: 927000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:10,926: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604190
+        nsecs: 925000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rosout][INFO] 2024-03-05 11:03:11,935: response: 
+  option: 7
+  ctrl_mode: 3
+  gear: 4
+  lamps: 
+    header: 
+      seq: 1
+      stamp: 
+        secs: 1709604191
+        nsecs: 933000000
+      frame_id: "Lamps"
+    turnSignal: 1
+    emergencySignal: 0
+  set_pause: False
+[rospy.core][INFO] 2024-03-05 11:03:12,873: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-05 11:03:12,874: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-03-05 11:03:12,875: signal-2
+[rospy.core][INFO] 2024-03-05 11:03:12,991: signal_shutdown [atexit]

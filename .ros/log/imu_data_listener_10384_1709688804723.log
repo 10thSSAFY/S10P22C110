@@ -1,0 +1,1866 @@
+[rospy.client][INFO] 2024-03-06 10:33:24,749: init_node, name[/imu_data_listener_10384_1709688804723], pid[10384]
+[xmlrpc][INFO] 2024-03-06 10:33:24,750: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2024-03-06 10:33:24,750: Started XML-RPC server [http://DESKTOP-LL832F4:40493/]
+[rospy.impl.masterslave][INFO] 2024-03-06 10:33:24,751: _ready: http://DESKTOP-LL832F4:40493/
+[rospy.init][INFO] 2024-03-06 10:33:24,751: ROS Slave URI: [http://DESKTOP-LL832F4:40493/]
+[rospy.registration][INFO] 2024-03-06 10:33:24,752: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2024-03-06 10:33:24,753: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2024-03-06 10:33:24,852: registered with master
+[rospy.rosout][INFO] 2024-03-06 10:33:24,852: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-06 10:33:24,855: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-06 10:33:24,856: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2024-03-06 10:33:24,870: topic[/imu] adding connection to [http://DESKTOP-LL832F4:37089/], count 0
+[rosout][INFO] 2024-03-06 10:33:24,903: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,905: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,906: x : 0.000367699860362 y : -0.00259188120253 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:24,906: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,907: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:24,911: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,912: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,913: x : 0.000367907428881 y : -0.00259176269174 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:24,914: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,914: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:24,919: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,921: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,922: x : 0.00036791790626 y : -0.00259177898988 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:24,923: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,924: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:24,953: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,955: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,956: x : 0.000368109351257 y : -0.00259163416922 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:24,957: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,957: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:24,961: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,962: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,963: x : 0.000368103443179 y : -0.0025916241575 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:24,964: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,965: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:24,984: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,985: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,986: x : 0.000367690139683 y : -0.00259186490439 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:24,987: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,988: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:24,992: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:24,993: orientation:
+[rosout][INFO] 2024-03-06 10:33:24,994: x : 0.000367690139683 y : -0.00259186490439 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:24,994: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:24,995: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,022: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,023: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,024: x : 0.000367917848052 y : -0.00259178038687 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,025: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,026: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,050: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,053: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,054: x : 0.000368116598111 y : -0.00259164650925 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,055: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,056: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,059: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,060: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,061: x : 0.000368116598111 y : -0.00259164650925 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,062: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,062: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,092: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,093: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,095: x : 0.000368122156942 y : -0.00259165465832 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:25,095: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,096: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,142: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,143: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,144: x : 0.000367529719369 y : -0.00259206187911 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,145: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,146: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,150: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,151: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,152: x : 0.000367529719369 y : -0.00259206187911 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,153: angular_velocity:
+[rospy.internal][INFO] 2024-03-06 10:33:25,155: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2024-03-06 10:33:25,155: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,194: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,196: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,197: x : 0.000367897941032 y : -0.00259174662642 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,199: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,200: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,204: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,205: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,206: x : 0.000367903674487 y : -0.00259175477549 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,207: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,208: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,212: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,213: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,214: x : 0.000367903674487 y : -0.00259175477549 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,215: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,216: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,242: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,243: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,245: x : 0.000368099164916 y : -0.00259161693975 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,246: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,247: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,252: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,254: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,255: x : 0.000367490487406 y : -0.00259199552238 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,256: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,257: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,266: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,268: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,270: x : 0.000367676751921 y : -0.00259184208699 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,270: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,272: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,283: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,285: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,286: x : 0.000367879110854 y : -0.00259171472862 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,287: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,288: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,302: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,304: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,305: x : 0.00036788743455 y : -0.00259172730148 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,306: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,307: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,320: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,322: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,323: x : 0.000368104985682 y : -0.00259162695147 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,324: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,325: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,362: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,364: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,366: x : 0.000368111388525 y : -0.00259163766168 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,367: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,368: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,372: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,374: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,375: x : 0.000368111388525 y : -0.00259163766168 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,376: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,377: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,423: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,425: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,426: x : 0.000367700558854 y : -0.00259188236669 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,427: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,428: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,431: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,433: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,435: x : 0.000367715372704 y : -0.0025919075124 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,436: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,437: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,440: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,442: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,443: x : 0.000368119508494 y : -0.00259165279567 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,443: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,444: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,483: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,485: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,486: x : 0.000367907836335 y : -0.00259176176041 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,487: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,489: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,492: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,494: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,494: x : 0.000367907836335 y : -0.00259176176041 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,495: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,496: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,501: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,503: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,504: x : 0.000368307810277 y : -0.00259150145575 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,505: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,506: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,510: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,511: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,512: x : 0.000367495813407 y : -0.00259200460277 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,513: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,514: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,520: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,521: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,523: x : 0.000367685512174 y : -0.00259185698815 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,523: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,524: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,562: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,564: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,565: x : 0.000367697473848 y : -0.00259187608026 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,567: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,569: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,572: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,574: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,575: x : 0.000367697473848 y : -0.00259187608026 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,576: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,577: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,613: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,615: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,617: x : 0.000368100125343 y : -0.00259161856957 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,618: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,619: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,624: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,625: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,626: x : 0.000368099892512 y : -0.00259161833674 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,627: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,628: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,674: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,676: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,677: x : 0.000367503176676 y : -0.0025920169428 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,678: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,679: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,683: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,685: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,686: x : 0.000367681728676 y : -0.00259185070172 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,687: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,689: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,693: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,694: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,695: x : 0.00036769072176 y : -0.00259186583571 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,696: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,697: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,722: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,724: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,725: x : 0.00036789177102 y : -0.00259173614904 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,727: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,728: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,732: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,733: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,735: x : 0.000368107110262 y : -0.00259163044393 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,736: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,737: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,741: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,743: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,744: x : 0.000368109351257 y : -0.00259163416922 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,745: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,746: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,783: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,786: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,787: x : 0.000368314911611 y : -0.00259151216596 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:25,788: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,789: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,793: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,794: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,795: x : 0.000368314911611 y : -0.00259151216596 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:25,796: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,797: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,802: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,804: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,805: x : 0.000367887172615 y : -0.00259172962978 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,806: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,807: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,811: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,812: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,813: x : 0.00036769369035 y : -0.00259187072515 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,815: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,816: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,824: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,826: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,827: x : 0.000367919448763 y : -0.00259178155102 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,828: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,829: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,836: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,838: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,839: x : 0.000368113280274 y : -0.00259164092131 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,840: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,841: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,853: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,855: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,856: x : 0.000368111970602 y : -0.002591638593 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:25,857: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,858: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,886: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,888: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,889: x : 0.000368115026504 y : -0.00259164255112 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:25,890: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,891: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,901: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,903: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,904: x : 0.000367533386452 y : -0.00259206816554 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,905: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,907: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,942: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,944: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,945: x : 0.000367716216715 y : -0.00259190890938 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:25,946: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,947: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:25,951: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:25,953: orientation:
+[rosout][INFO] 2024-03-06 10:33:25,955: x : 0.000367716798792 y : -0.00259190867655 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:25,956: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:25,957: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,002: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,004: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,005: x : 0.000367923348676 y : -0.00259178807028 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,006: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,007: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,011: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,012: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,013: x : 0.00036812631879 y : -0.00259166280739 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,014: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,015: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,019: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,020: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,021: x : 0.000368317763787 y : -0.00259151821956 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,022: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,023: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,052: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,054: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,056: x : 0.000367311236914 y : -0.00259216083214 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,057: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,059: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,062: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,064: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,065: x : 0.000367311236914 y : -0.00259216083214 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,066: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,067: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,071: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,073: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,075: x : 0.00036769642611 y : -0.00259187538177 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,076: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,077: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,081: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,083: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,084: x : 0.000367893313523 y : -0.00259173871018 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:26,085: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,086: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,108: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,110: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,111: x : 0.000367896456737 y : -0.0025917426683 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,111: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,112: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,125: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,127: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,128: x : 0.000367896456737 y : -0.0025917426683 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,129: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,130: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,173: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,175: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,176: x : 0.000368119071936 y : -0.00259164953604 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:26,177: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,178: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,182: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,183: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,184: x : 0.000367335072951 y : -0.00259220111184 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,185: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,186: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,233: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,234: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,236: x : 0.000367916451069 y : -0.00259177922271 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,237: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,238: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,242: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,244: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,245: x : 0.000367896456737 y : -0.0025917426683 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,246: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,247: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,250: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,252: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,253: x : 0.000368107226677 y : -0.00259163067676 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,254: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,256: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,285: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,286: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,288: x : 0.000368107226677 y : -0.00259163067676 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,289: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,290: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,295: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,296: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,298: x : 0.000368107459508 y : -0.00259163114242 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,299: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,300: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,303: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,304: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,306: x : 0.000368101289496 y : -0.00259161926806 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:26,307: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,308: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,333: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,334: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,335: x : 0.000367502478184 y : -0.00259201577865 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,337: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,338: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,342: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,343: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,344: x : 0.000367883010767 y : -0.00259172264487 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,345: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,346: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,350: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,351: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,352: x : 0.000367684784578 y : -0.00259185465984 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:26,353: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,354: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,360: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,362: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,363: x : 0.000367881497368 y : -0.00259171728976 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,364: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,365: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,376: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,378: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,379: x : 0.000367897853721 y : -0.00259174499661 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,380: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,381: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,396: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,398: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,399: x : 0.000368310546037 y : -0.00259150611237 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,400: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,401: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,426: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,428: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,429: x : 0.000368099164916 y : -0.0025916157756 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:26,430: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,431: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,451: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,453: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,454: x : 0.000367511820514 y : -0.00259203161113 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,455: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,456: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,460: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,462: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,464: x : 0.00036788493162 y : -0.00259172590449 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,465: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,466: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,479: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,480: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,482: x : 0.000367877306417 y : -0.00259171170183 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:26,483: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,484: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,494: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,495: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,497: x : 0.000367883301806 y : -0.00259172031656 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,498: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,499: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,528: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,530: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,531: x : 0.000367900473066 y : -0.00259174942039 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,532: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,533: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,547: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,549: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,550: x : 0.000368128181435 y : -0.00259166490287 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:26,551: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,552: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,603: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,605: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,606: x : 0.000367539090803 y : -0.0025920777116 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,607: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,608: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,613: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,614: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,615: x : 0.000367713830201 y : -0.00259190495126 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,616: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,617: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,621: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,623: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,624: x : 0.000367716449546 y : -0.00259190937504 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,625: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,626: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,653: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,655: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,656: x : 0.000367924832972 y : -0.0025917920284 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:26,657: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,658: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,662: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,664: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,665: x : 0.000368122040527 y : -0.00259165558964 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,665: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,667: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,670: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,672: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,672: x : 0.000368116132449 y : -0.00259164557792 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,673: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,675: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,679: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,681: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,682: x : 0.000368322507711 y : -0.00259152497165 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:26,683: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,684: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,695: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,697: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,698: x : 0.000367519649444 y : -0.00259204488248 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,699: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,700: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,729: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,731: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,732: x : 0.000367700442439 y : -0.00259188236669 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,733: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,734: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,747: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,749: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,750: x : 0.000367694970919 y : -0.00259187188931 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:26,751: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,752: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,763: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,765: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,766: x : 0.000367900938727 y : -0.00259175011888 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,767: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,768: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,781: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,783: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,784: x : 0.000367911037756 y : -0.00259176734835 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,785: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,786: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,822: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,824: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,825: x : 0.000368314096704 y : -0.00259151216596 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,826: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,828: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,832: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,834: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,834: x : 0.000367503060261 y : -0.0025920169428 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,835: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,836: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,872: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,874: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,875: x : 0.000367681233911 y : -0.0025918497704 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,877: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,878: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,883: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,884: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,885: x : 0.00036789450678 y : -0.00259174196981 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,886: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,887: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,922: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,925: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,926: x : 0.000367906468455 y : -0.00259176106192 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:26,927: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,928: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,932: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,934: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,935: x : 0.000367911503417 y : -0.00259176804684 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,936: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,937: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,941: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,942: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,943: x : 0.000368306384189 y : -0.00259149912745 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,944: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,945: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,949: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,951: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,952: x : 0.000368296809029 y : -0.0025914828293 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:26,953: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,954: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,971: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,973: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,974: x : 0.000367875560187 y : -0.00259171007201 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,975: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,976: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:26,983: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:26,985: orientation:
+[rosout][INFO] 2024-03-06 10:33:26,986: x : 0.000367875560187 y : -0.00259171007201 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:26,987: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:26,988: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,033: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,035: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,036: x : 0.000367881002603 y : -0.00259171915241 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,037: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,038: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,042: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,043: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,044: x : 0.000367892382201 y : -0.00259173708037 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,045: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,046: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,093: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,094: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,095: x : 0.000368113862351 y : -0.00259164185263 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,096: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,097: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,101: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,103: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,104: x : 0.000368135544704 y : -0.00259167724289 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,105: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,105: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,109: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,111: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,111: x : 0.000368135544704 y : -0.00259167724289 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,112: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,113: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,155: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,157: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,158: x : 0.000367535307305 y : -0.00259207142517 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,159: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,159: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,163: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,164: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,165: x : 0.000367711705621 y : -0.00259190122597 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,166: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,167: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,171: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,173: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,174: x : 0.000367706466932 y : -0.00259189121425 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,175: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,176: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,179: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,180: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,182: x : 0.000367930450011 y : -0.00259180017747 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,183: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,184: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,188: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,190: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,190: x : 0.000367930450011 y : -0.00259180017747 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,191: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,192: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,244: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,245: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,246: x : 0.000368135690223 y : -0.00259167863987 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,247: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,249: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,253: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,255: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,256: x : 0.000368131266441 y : -0.00259167002514 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,257: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,258: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,262: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,263: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,264: x : 0.000367342989193 y : -0.00259221461602 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,265: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,266: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,293: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,294: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,296: x : 0.000367722357623 y : -0.00259191798978 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,296: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,297: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,301: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,303: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,304: x : 0.000367722357623 y : -0.00259191798978 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,305: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,306: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,310: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,312: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,312: x : 0.000367926782928 y : -0.00259179389104 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,313: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,315: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,324: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,326: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,327: x : 0.000368132226868 y : -0.00259167305194 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,328: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,330: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,335: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,337: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,338: x : 0.00036832477781 y : -0.00259153009392 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,339: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,340: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,368: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,370: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,372: x : 0.000367520347936 y : -0.00259204604663 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,373: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,374: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,385: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,387: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,388: x : 0.000367520347936 y : -0.00259204604663 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,389: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,390: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,432: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,434: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,435: x : 0.000367687403923 y : -0.00259186024778 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,437: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,438: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,442: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,443: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,444: x : 0.00036768586142 y : -0.00259185628965 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,445: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,446: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,483: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,485: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,487: x : 0.000368094304577 y : -0.00259160879068 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,488: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,489: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,493: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,494: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,495: x : 0.000368098670151 y : -0.00259161507711 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,496: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,497: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,532: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,535: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,536: x : 0.000368098670151 y : -0.00259161507711 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,538: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,539: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,542: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,544: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,544: x : 0.000367313477909 y : -0.00259216455743 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,545: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,546: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,551: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,553: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,554: x : 0.000367707689293 y : -0.00259189447388 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,555: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,557: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,593: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,595: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,596: x : 0.000367900676792 y : -0.00259175128303 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,597: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,598: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,602: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,604: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,606: x : 0.0003679151705 y : -0.00259177433327 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,606: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,607: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,611: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,612: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,613: x : 0.000368106877431 y : -0.00259162997827 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,614: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,615: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,619: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,622: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,623: x : 0.000368105917005 y : -0.00259162834845 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,624: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,625: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,629: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,630: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,631: x : 0.000368310546037 y : -0.00259150471538 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,632: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,633: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,637: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,639: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,640: x : 0.000367313361494 y : -0.00259216455743 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,641: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,642: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,654: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,655: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,656: x : 0.000367699394701 y : -0.00259188050404 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,657: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,658: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,689: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,691: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,692: x : 0.000367909553461 y : -0.0025917661842 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,693: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,694: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,743: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,745: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,746: x : 0.000367909000488 y : -0.00259176385589 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,747: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,748: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,753: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,755: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,756: x : 0.000367919332348 y : -0.00259178131819 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,757: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,758: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,762: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,763: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,764: x : 0.000368323584553 y : -0.00259152823128 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,765: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,766: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,803: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,805: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,806: x : 0.000367513246601 y : -0.00259203417227 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,807: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,808: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,812: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,813: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,814: x : 0.000367684086086 y : -0.00259185465984 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,815: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,817: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,821: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,823: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,824: x : 0.000367686210666 y : -0.0025918581523 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,825: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,827: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,852: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,854: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,856: x : 0.000367891072528 y : -0.00259173498489 z : -0.509057879448 w : -0.860728383064
+[rosout][INFO] 2024-03-06 10:33:27,857: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,858: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,862: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,863: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,864: x : 0.000368104636436 y : -0.00259162625298 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,865: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,866: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,870: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,872: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,873: x : 0.000368111155694 y : -0.00259163719602 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,874: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,875: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,880: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,882: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,883: x : 0.000368119188352 y : -0.00259164953604 z : -0.509058356285 w : -0.860728085041
+[rosout][INFO] 2024-03-06 10:33:27,884: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,885: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,927: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,929: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,930: x : 0.000367529253708 y : -0.00259206118062 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,931: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,932: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,941: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,943: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,944: x : 0.000367529253708 y : -0.00259206118062 z : -0.509057641029 w : -0.860728502274
+[rosout][INFO] 2024-03-06 10:33:27,945: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,946: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,982: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,984: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,986: x : 0.000367917062249 y : -0.00259177736007 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,987: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,988: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rosout][INFO] 2024-03-06 10:33:27,991: ------------------ IMU Sensor Status ------------------
+[rosout][INFO] 2024-03-06 10:33:27,993: orientation:
+[rosout][INFO] 2024-03-06 10:33:27,994: x : 0.000367917062249 y : -0.00259177736007 z : -0.509058117867 w : -0.86072820425
+[rosout][INFO] 2024-03-06 10:33:27,995: angular_velocity:
+[rosout][ERROR] 2024-03-06 10:33:27,996: bad callback: <function imu_callback at 0x7f25d6614dd0>
+Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/ubuntu/catkin_ws/src/ssafy_1/scripts/get_imu.py", line 23, in imu_callback
+    rospy.loginfo("x : {} y : {} z : {}".format( data.angular_valocity.x , data.angular_valocity.y , data.angular_valocity.z ))
+AttributeError: 'Imu' object has no attribute 'angular_valocity'
+
+[rospy.core][INFO] 2024-03-06 10:33:28,005: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-06 10:33:28,007: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2024-03-06 10:33:28,007: topic[/imu] removing connection to http://DESKTOP-LL832F4:37089/
+[rospy.impl.masterslave][INFO] 2024-03-06 10:33:28,008: signal-2
+[rospy.core][INFO] 2024-03-06 10:33:28,140: signal_shutdown [atexit]

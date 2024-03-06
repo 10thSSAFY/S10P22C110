@@ -1,0 +1,378 @@
+[rospy.client][INFO] 2024-03-05 11:42:20,427: init_node, name[/MoraiSL_client_4713_1709606540402], pid[4713]
+[xmlrpc][INFO] 2024-03-05 11:42:20,428: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2024-03-05 11:42:20,429: ROS Slave URI: [http://DESKTOP-LL832F4:37917/]
+[xmlrpc][INFO] 2024-03-05 11:42:20,428: Started XML-RPC server [http://DESKTOP-LL832F4:37917/]
+[rospy.impl.masterslave][INFO] 2024-03-05 11:42:20,429: _ready: http://DESKTOP-LL832F4:37917/
+[rospy.registration][INFO] 2024-03-05 11:42:20,430: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2024-03-05 11:42:20,430: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2024-03-05 11:42:20,529: registered with master
+[rospy.rosout][INFO] 2024-03-05 11:42:20,529: initializing /rosout core topic
+[rospy.rosout][INFO] 2024-03-05 11:42:20,532: connected to core topic /rosout
+[rospy.simtime][INFO] 2024-03-05 11:42:20,533: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2024-03-05 11:42:20,547: response: 
+  result: True
+[rospy.internal][INFO] 2024-03-05 11:42:20,737: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2024-03-05 11:42:21,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:22,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:23,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:24,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:25,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:26,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:27,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:28,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:29,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:30,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:31,545: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:32,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:33,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:34,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:35,563: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:36,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:37,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:38,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:39,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:40,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:41,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:42,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:43,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:44,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:45,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:46,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:47,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:48,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:49,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:50,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:51,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:52,573: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:53,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:54,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:55,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:56,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:57,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:58,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:42:59,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:00,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:01,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:02,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:03,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:04,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:05,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:06,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:07,545: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:08,561: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:09,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:10,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:11,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:12,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:13,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:14,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:15,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:16,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:17,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:18,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:19,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:20,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:21,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:22,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:23,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:24,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:25,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:26,563: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:27,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:28,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:29,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:30,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:31,568: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:32,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:33,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:34,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:35,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:36,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:37,544: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:38,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:39,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:40,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:41,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:42,549: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:43,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:44,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:45,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:46,562: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:47,553: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:48,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:49,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:50,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:51,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:52,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:53,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:54,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:55,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:56,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:57,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:58,563: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:43:59,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:00,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:01,549: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:02,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:03,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:04,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:05,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:06,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:07,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:08,568: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:09,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:10,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:11,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:12,555: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:13,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:14,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:15,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:16,559: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:17,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:18,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:19,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:20,545: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:21,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:22,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:23,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:24,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:25,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:26,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:27,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:28,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:29,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:30,561: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:31,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:32,545: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:33,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:34,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:35,562: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:36,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:37,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:38,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:39,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:40,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:41,575: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:42,554: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:43,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:44,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:45,550: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:46,552: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:47,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:48,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:49,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:50,545: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:51,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:52,551: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:53,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:54,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:55,567: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:56,600: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:57,545: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:58,587: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:44:59,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:00,548: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:01,572: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:02,563: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:03,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:04,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:05,556: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:06,549: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:07,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:08,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:09,546: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:10,563: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:11,549: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:12,544: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:13,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:14,577: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:15,557: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:16,564: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:17,558: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:18,547: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:19,560: response: 
+  result: True
+[rosout][INFO] 2024-03-05 11:45:20,573: response: 
+  result: True
+[rospy.core][INFO] 2024-03-05 11:45:21,398: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2024-03-05 11:45:21,400: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2024-03-05 11:45:21,400: signal-2
+[rospy.core][INFO] 2024-03-05 11:45:21,516: signal_shutdown [atexit]
