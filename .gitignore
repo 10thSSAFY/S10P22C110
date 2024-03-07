@@ -1,4 +1,15 @@
-.viminfo
-.gitconfig
 .bash_history
+.bash_logout
+.cache/
+.config/
+.gnupg/
+.local/
+.profile
+.ros/
+.sudo_as_admin_successful
+.vim/
+.viminfo
 .vscode-server/
+.wget-hsts
+catkin_ws/build/
+catkin_ws/devel/
