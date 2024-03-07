@@ -2,7 +2,7 @@
 .bash_logout
 .cache/
 .config/
-.gitconfig/
+.gitconfig
 .gnupg/
 .local/
 .profile
