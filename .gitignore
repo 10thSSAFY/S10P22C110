@@ -1,6 +1,7 @@
 .bash_history
 .bash_logout
 .cache/
+.catkin_workspace
 .config/
 .gitconfig
 .gnupg/
@@ -12,5 +13,5 @@
 .viminfo
 .vscode-server/
 .wget-hsts
-catkin_ws/build/
-catkin_ws/devel/
+build/
+devel/
