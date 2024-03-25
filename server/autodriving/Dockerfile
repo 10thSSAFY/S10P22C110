@@ -7,6 +7,8 @@ COPY . /home/app
 # 작업 디렉토리를 설정합니다.
 WORKDIR /home/app
 
+RUN chmod +x ./gradlew
+
 # Gradle wrapper를 사용하여 프로젝트를 빌드합니다.
 RUN ./gradlew build
 
