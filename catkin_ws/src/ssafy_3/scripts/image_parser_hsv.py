@@ -30,6 +30,9 @@ class IMGParser:
             img_bgr = cv2.imdecode(             )
 
             '''
+            np_arr = np.fromstring(msg.data, np.uint8)
+            img_bgr = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+
         except CvBridgeError as e:
             print(e)
 
@@ -42,6 +45,8 @@ class IMGParser:
         img_hsv = cv2.cvtColor(                 )
 
         '''
+        img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)
+
         #TODO: (2)
         '''
         # np.concatenate 함수는 는 서로 다른 두 배열을 합치는 예제입니다.
@@ -50,6 +55,7 @@ class IMGParser:
         img_concat = np.concatenate(            )
 
         '''
+        img_concat = np.concatenate((img_bgr, img_hsv), axis = 1)
 
         #TODO: (3)
         '''
@@ -59,6 +65,8 @@ class IMGParser:
         cv2.waitKey(        ) 
 
         '''
+        cv2.imshow("Image window", img_concat)
+        cv2.waitKey(1)
 
 
 if __name__ == '__main__':

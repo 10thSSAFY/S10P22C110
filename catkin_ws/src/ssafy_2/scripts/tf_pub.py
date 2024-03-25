@@ -32,9 +32,15 @@ class Ego_listener():
         self.orientation_x = 물체의 quaternion x 값 
         self.orientation_y = 물체의 quaternion y 값
         self.orientation_z = 물체의 quaternion z 값
-        self.orientation_w = 물체의 quaternion ㅈ 값
+        self.orientation_w = 물체의 quaternion w 값
 
         '''
+        self.x = msg.pose.pose.position.x
+        self.y = msg.pose.pose.position.y
+        self.orientation_x = msg.pose.pose.orientation.x
+        self.orientation_y = msg.pose.pose.orientation.y
+        self.orientation_z = msg.pose.pose.orientation.z
+        self.orientation_w = msg.pose.pose.orientation.w
 
         #TODO: (2) 브로드캐스터 생성 및 Ego 상태 tf 브로드캐스팅
         '''
@@ -49,6 +55,12 @@ class Ego_listener():
                         "map")
 
         '''
+        br = tf.TransformBroadcaster()
+        br.sendTransform((self.x, self.y, 1),
+                        (self.orientation_x, self.orientation_y, self.orientation_z, self.orientation_w),
+                        rospy.Time.now(),
+                        "Ego",
+                        "map")
 
 if __name__ == '__main__':
     try:

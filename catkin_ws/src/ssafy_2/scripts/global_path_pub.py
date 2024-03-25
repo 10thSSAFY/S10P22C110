@@ -30,6 +30,10 @@ class global_path_pub :
         self.global_path_msg.header.frame_id = 
 
         '''
+        self.global_path_pub = rospy.Publisher('/global_path', Path, queue_size=10)
+        self.global_path_msg = Path()
+        self.global_path_msg.header.frame_id = "map"
+
 
         #TODO: (2) 읽어올 경로 의 텍스트파일 이름을 정하고, 읽기 모드로 열기
         '''
@@ -43,6 +47,11 @@ class global_path_pub :
         lines = self.f.readlines()
 
         '''
+        rospack = rospkg.RosPack()
+        pkg_path = rospack.get_path(pkg_name)
+        full_path = pkg_path + '/path/' + path_name + '.txt'
+        self.f = open(full_path, 'r')
+        lines = self.f.readlines()
 
         #TODO: (3) 읽어 온 경로 데이터를 Global Path 변수에 넣기
         '''
@@ -59,6 +68,15 @@ class global_path_pub :
 
         '''
 
+        for line in lines :
+            tmp = line.split()
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = float(tmp[0])
+            read_pose.pose.position.y = float(tmp[1])
+            read_pose.pose.orientation.w = 1
+            self.global_path_msg.poses.append(read_pose)        
+        self.f.close()
+
         rate = rospy.Rate(10) # 10hz
         while not rospy.is_shutdown():
             #TODO: (4) Global Path 정보 Publish
@@ -67,6 +85,7 @@ class global_path_pub :
             self.global_path_pub.
             
             '''
+            self.global_path_pub.publish(self.global_path_msg)
             rate.sleep()
 
 if __name__ == '__main__':

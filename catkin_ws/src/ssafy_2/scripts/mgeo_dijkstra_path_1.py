@@ -56,7 +56,7 @@ class dijkstra_path_pub :
     def __init__(self):
         rospy.init_node('dijkstra_path_pub', anonymous=True)
 
-        self.global_path_pub = rospy.Publisher('/global_path',Path, queue_size = 1)
+        self.global_path_pub = rospy.Publisher('/global_path', Path, queue_size = 1)
 
         #TODO: (1) Mgeo data 읽어온 후 데이터 확인
         load_path = os.path.normpath(os.path.join(current_path, 'lib/mgeo_data/R_KR_PG_K-City'))
@@ -67,6 +67,7 @@ class dijkstra_path_pub :
 
         self.nodes=node_set.nodes
         self.links=link_set.lines
+
 
         self.global_planner=Dijkstra(self.nodes,self.links)
 
@@ -82,6 +83,8 @@ class dijkstra_path_pub :
         self.end_node = 'A119BS010148'
 
         '''
+        self.start_node = 'A119BS010184'
+        self.end_node = 'A119BS010148'
 
         self.global_path_msg = Path()
         self.global_path_msg.header.frame_id = '/map'
@@ -96,19 +99,29 @@ class dijkstra_path_pub :
             self.global_path_pub.
             
             '''
+            self.global_path_pub.publish(self.global_path_msg)
             rate.sleep()
 
     def calc_dijkstra_path_node(self, start_node, end_node):
-
-        result, path = self.global_planner.find_shortest_path(start_node, end_node)
-
         #TODO: (10) dijkstra 경로 데이터를 ROS Path 메세지 형식에 맞춰 정의
-        out_path = Path()
-        out_path.header.frame_id = '/map'
         '''
         # dijkstra 경로 데이터 중 Point 정보를 이용하여 Path 데이터를 만들어 줍니다.
 
         '''
+        result, path = self.global_planner.find_shortest_path(start_node, end_node)
+        if not result:
+            rospy.logwarn("No path found")
+            return None
+
+        out_path = Path()
+        out_path.header.frame_id = '/map'
+
+        for point in path['point_path']:
+            pose = PoseStamped()
+            pose.pose.position.x = point[0]
+            pose.pose.position.y = point[1]
+            pose.pose.position.z = point[2]
+            out_path.poses.append(pose)
 
         return out_path
 
@@ -162,6 +175,14 @@ class Dijkstra:
         # shortest_link 의 min_cost 를 계산 합니다.
 
         '''
+        min_cost = float('inf')
+        shortest_link = None
+        
+        for link in from_node.get_to_links():
+            if link.to_node.idx == to_node.idx:
+                if link.cost < min_cost:
+                    min_cost = link.cost
+                    shortest_link = link
 
         return shortest_link, min_cost
         

@@ -29,12 +29,17 @@ class IMGParser:
             img_bgr = cv2.imdecode(             )
 
             '''
+            np_arr = np.fromstring(msg.data, np.uint8)
+            img_bgr = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+
         except CvBridgeError as e:
             print(e)
         '''
         img_hsv = cv2.cvtColor(                 )
 
         '''
+        img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)
+
         #TODO: (1)
         '''
         # 특정 색상 영역을 검출하기 위해 범위를 지정합니다.
@@ -45,6 +50,8 @@ class IMGParser:
         upper_ylane = np.array([    ,       ,       ])
 
         '''
+        lower_wlane = np.array([    10,       100,       100])
+        upper_wlane = np.array([    30,       255,       255])
         
         #TODO: (2)
         '''
@@ -60,6 +67,11 @@ class IMGParser:
 
 
         '''
+        img_wlane = cv2.inRange(img_hsv, lower_wlane, upper_wlane)
+
+        img_wlane = cv2.cvtColor(img_wlane, cv2.COLOR_GRAY2BGR)
+        
+        img_concat = np.concatenate((img_bgr, img_hsv, img_wlane), axis=1)
 
         #TODO: (3)
         '''
@@ -69,6 +81,8 @@ class IMGParser:
         cv2.waitKey(        ) 
 
         '''
+        cv2.imshow("Image window", img_concat)
+        cv2.waitKey(1)
 
 
 if __name__ == '__main__':

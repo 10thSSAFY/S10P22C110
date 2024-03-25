@@ -1,0 +1,10 @@
+digraph G {
+"map" -> "base_link"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 50.137 Hz\nMost recent transform: 1711011030.862 ( 0.156 sec old)\nBuffer length: 2.553 sec\n"];
+"base_link" -> "Camera"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 50.137 Hz\nMost recent transform: 1711011030.862 ( 0.156 sec old)\nBuffer length: 2.553 sec\n"];
+"base_link" -> "gps"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 50.137 Hz\nMost recent transform: 1711011030.862 ( 0.156 sec old)\nBuffer length: 2.553 sec\n"];
+"base_link" -> "imu"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 50.137 Hz\nMost recent transform: 1711011030.862 ( 0.156 sec old)\nBuffer length: 2.553 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1711011031.018"[ shape=plaintext ] ;
+ }->"map";
+}

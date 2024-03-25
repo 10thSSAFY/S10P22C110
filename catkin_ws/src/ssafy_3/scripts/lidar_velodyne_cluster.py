@@ -4,6 +4,7 @@
 import rospy
 import cv2
 import numpy as np
+from math import atan2, sqrt
 
 from sensor_msgs.msg import PointCloud2
 import sensor_msgs.point_cloud2 as pc2
@@ -22,12 +23,10 @@ from sklearn.cluster import DBSCAN
 class SCANCluster:
     def __init__(self):
 
-        self.scan_sub = rospy.Subscriber("/velodyne_points", PointCloud2, self.callback)
-
+        self.scan_sub = rospy.Subscriber("/lidar3D", PointCloud2, self.callback)
         self.cluster_pub = rospy.Publisher("clusters", PoseArray, queue_size=10)
 
         self.pc_np = None
-
         #TODO: (1) DBSCAN Parameter 입력
         '''
         # DBSCAN의 Parameter를 결정하는 영역입니다.
@@ -35,6 +34,7 @@ class SCANCluster:
 
         self.dbscan = DBSCAN( , , ...)
         '''
+        self.dbscan = DBSCAN(eps=0.5, min_samples=3)
     
     def callback(self, msg):    
         self.pc_np = self.pointcloud2_to_xyz(msg)
@@ -67,6 +67,11 @@ class SCANCluster:
                 #tmp_pose.position.x = 
                 #tmp_pose.position.y = 
                 '''
+
+                tmp_pose=Pose()
+                tmp_pose.position.x = pc_xy[cluster][0]
+                tmp_pose.position.y = pc_xy[cluster][1]
+
                 cluster_msg.poses.append(tmp_pose)
                 
         self.cluster_pub.publish(cluster_msg)
@@ -85,7 +90,10 @@ class SCANCluster:
             dist = 
             angle = 
             '''
-            
+
+            dist = sqrt(point[0]**2 + point[1]**2 + point[2]**2)
+            angle = atan2(point[1], point[0])
+
             if point[0] > 0 and 1.50 > point[2] > -1.25 and dist < 50:
                 point_list.append((point[0], point[1], point[2], point[3], dist, angle))
 

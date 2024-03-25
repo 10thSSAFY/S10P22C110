@@ -38,6 +38,11 @@ class pathMaker :
         self.f = 
 
         '''
+        rospack = rospkg.RosPack()
+        pkg_path = rospack.get_path('ssafy_2')
+        full_path = pkg_path + '/path/' + 'test.txt'
+        self.f = open(full_path, 'w')
+
         while not rospy.is_shutdown():
             if self.is_odom == True :
                 # Ego 위치 기록
@@ -56,7 +61,7 @@ class pathMaker :
         distance = 
 
         '''
-
+        distance = sqrt((self.prev_x - self.x)**2 + (self.prev_y - self.y)**2)
         #TODO: (4) 이전 위치보다 0.5m 이상일 때 위치를 저장        
         if distance >0.5:
             '''
@@ -72,6 +77,14 @@ class pathMaker :
             print(기록 된 위치 좌표를 출력한다)
 
             '''
+            data ='{0}\t{1}\t{2}\n'.format(x,y,z)
+            self.f.write(data)
+            self.prev_x = self.x
+            self.prev_y = self.y
+            self.prev_z = 0.0
+            
+            print(self.prev_x, self.prev_y, self.prev_z)
+
 
     def odom_callback(self,msg):
         self.is_odom = True
@@ -84,6 +97,9 @@ class pathMaker :
         self.y = 물체의 y 좌표
 
         '''
+        self.x = msg.pose.pose.position.x
+        self.y = msg.pose.pose.position.y
+
 if __name__ == '__main__' :
     try:
         p_m=pathMaker()

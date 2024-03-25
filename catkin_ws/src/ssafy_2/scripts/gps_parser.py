@@ -37,6 +37,7 @@ class LL2UTMConverter:
         self.proj_UTM = Proj( 좌표 변환을 위한 변수 입력 )
 
         '''
+        self.proj_UTM = Proj(proj='utm', zone=52, ellps = 'WGS84', preserve_units=False)
 
     #TODO: (2) 시뮬레이터에서 GPS 데이터를 받아오는 Callback 함수 생성
     def navsat_callback(self, gps_msg):
@@ -46,6 +47,8 @@ class LL2UTMConverter:
         self.lon = 
 
         '''
+        self.lat = gps_msg.latitude
+        self.lon = gps_msg.longitude
         self.convertLL2UTM()
 
         utm_msg = Float32MultiArray()
@@ -61,6 +64,12 @@ class LL2UTMConverter:
         print(' utm Y : ', utm 좌표로 변환한 y 좌표)
 
         '''
+        utm_msg.data = [self.x, self.y]
+        os.system('clear')
+        print(' lat : {}'.format(self.lat))
+        print(' lon : {}'.format(self.lon))
+        print(' utm X : {}'.format(self.x))
+        print(' utm Y : {}'.format(self.y))
 
 
     #TODO: (3) 위도 경도 데이터를 UTM 좌표로 변환
@@ -73,6 +82,10 @@ class LL2UTMConverter:
         self.y = xy_zone[1]
 
         '''
+        xy_zone = self.proj_UTM(self.lon, self.lat)
+        self.x = xy_zone[0]
+        self.y = xy_zone[1]
+
 
 if __name__ == '__main__':
 

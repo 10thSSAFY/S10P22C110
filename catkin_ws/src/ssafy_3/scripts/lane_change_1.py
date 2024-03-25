@@ -47,6 +47,8 @@ class lc_path_pub :
 
         rospy.Subscriber(object_topic_name, ObjectStatusList, self.object_info_callback)
 
+        # rospy.Subscriber("/Object_topic", ObjectStatusList, self.object_info_callback)
+
         #TODO: (1) subscriber, publisher 선언
         '''
         # Gloabl Path 와 Odometry, Object 데이터를 수신 할 Subscriber 를 만들고 
@@ -59,6 +61,9 @@ class lc_path_pub :
         self.local_path_pub = 
 
         '''
+        rospy.Subscriber( "odom", Odometry, self.odom_callback )
+        self.global_path_pub = rospy.Publisher("/global_path", Path, queue_size=10)
+        self.local_path_pub = rospy.Publisher("/lane_change_path", Path, queue_size=10)
 
         self.lc_1=Path()
         self.lc_1.header.frame_id='/map'
@@ -80,6 +85,35 @@ class lc_path_pub :
         self.f.close()
 
         '''
+        lc_1 = pkg_path + '/path' + '/lc_1.txt'
+        self.f=open(lc_1,'r')
+
+        lines = self.f.readlines()
+
+        for line in lines :
+            tmp = line.split()
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = float(tmp[0])
+            read_pose.pose.position.y = float(tmp[1])
+            read_pose.pose.orientation.w = 1
+            self.lc_1.poses.append(read_pose)    
+
+        self.f.close()
+
+        lc_2 = pkg_path + '/path' + '/lc_2.txt'
+        self.f=open(lc_2,'r')
+
+        lines = self.f.readlines()
+
+        for line in lines :
+            tmp = line.split()
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = float(tmp[0])
+            read_pose.pose.position.y = float(tmp[1])
+            read_pose.pose.orientation.w = 1
+            self.lc_2.poses.append(read_pose)  
+
+        self.f.close()
 
         self.is_object_info = False
         self.is_odom = False
@@ -95,6 +129,7 @@ class lc_path_pub :
         global_path = self.lc_1
 
         '''
+        global_path = self.lc_1
         
         rate = rospy.Rate(10) # 10hz
         while not rospy.is_shutdown():
@@ -117,6 +152,8 @@ class lc_path_pub :
                 self.global_path_pub.
                 
                 '''
+                self.local_path_pub.publish(self.local_path_msg)
+                self.global_path_pub.publish(global_path)
 
             rate.sleep()
 
@@ -268,6 +305,19 @@ class lc_path_pub :
                                 min_rel_distance = 
                                 self.object=[True,i]
         '''
+        if len(global_vaild_object) >0  :
+            min_rel_distance = float('inf')
+            for i in range(len(global_vaild_object)):
+                for path in ref_path.poses :   
+                    if global_vaild_object[i][0]==1 or global_vaild_object[i][0]==2 :  
+                        dx = global_vaild_object[i][1] - path.pose.position.x
+                        dy = global_vaild_object[i][2] - path.pose.position.y
+                        dis = sqrt(dx**2 + dy**2)
+                        if dis<2.5:
+                            rel_distance= dis                    
+                            if rel_distance < min_rel_distance:
+                                min_rel_distance = rel_distance
+                                self.object=[True,i]
 
 if __name__ == '__main__':
     try:

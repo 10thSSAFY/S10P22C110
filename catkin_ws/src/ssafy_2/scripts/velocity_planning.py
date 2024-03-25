@@ -69,6 +69,12 @@ class pure_pursuit :
         self.ctrl_cmd_pub = 
 
         '''
+        rospy.Subscriber("/global_path", Path, self.global_path_callback )
+        rospy.Subscriber("local_path", Path, self.path_callback )
+        rospy.Subscriber("odom", Odometry, self.odom_callback )
+        rospy.Subscriber("/Ego_topic", EgoVehicleStatus , self.status_callback)
+        self.ctrl_cmd_pub = rospy.Publisher("/ctrl_cmd", CtrlCmd, queue_size=10)
+
 
         self.ctrl_cmd_msg=CtrlCmd()
         self.ctrl_cmd_msg.longlCmdType=1
@@ -128,6 +134,7 @@ class pure_pursuit :
                 self.ctrl_cmd_pub.
                 
                 '''
+                self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
                 
             rate.sleep()
 
@@ -199,6 +206,23 @@ class pure_pursuit :
                     break
 
         '''
+        trans_matrix = np.array([[cos(self.vehicle_yaw), -sin(self.vehicle_yaw), translation[0]],
+                                    [sin(self.vehicle_yaw), cos(self.vehicle_yaw), translation[1]],
+                                    [0, 0, 1]])
+        det_trans_matrix = np.linalg.inv(trans_matrix)
+
+        for num,i in enumerate(self.path.poses) :
+            path_point = i.pose.position
+
+            global_path_point = [path_point.x, path_point.y, 1]
+            local_path_point = det_trans_matrix.dot(global_path_point)    
+
+            if local_path_point[0]>0 :
+                dis = sqrt(pow(local_path_point[0], 2) + pow(local_path_point[1], 2))
+                if dis >= self.lfd :
+                    self.forward_point = path_point
+                    self.is_look_forward_point = True
+                    break
         
         #TODO: (3) Steering 각도 계산
         '''
@@ -209,7 +233,8 @@ class pure_pursuit :
         steering = 
 
         '''
-
+        theta = atan2(self.forward_point.y - vehicle_position.y, self.forward_point.x - vehicle_position.x) - self.vehicle_yaw
+        steering = atan2(2.0 * self.vehicle_length * sin(theta), self.lfd)
         return steering
 
 class pidControl:
@@ -236,8 +261,13 @@ class pidControl:
 
         output = 
         self.prev_error = 
-
         '''
+        p_control = self.p_gain * error
+        self.i_control += self.i_gain * error * self.controlTime
+        d_control = self.d_gain * (error - self.prev_error) / self.controlTime
+
+        output = p_control + self.i_control + d_control
+        self.prev_error = error
 
         return output
 
@@ -269,17 +299,21 @@ class velocityPlanning:
             # 적용한 수식을 통해 곡률 반지름 "r" 을 계산합니다.
 
             r = 
-
             '''
-
+            A = np.array(x_list)
+            B = np.array(y_list)
+            X = np.dot(np.linalg.inv(np.dot(A.T, A)), np.dot(A.T, B))
+            r = sqrt(X[0]**2 + X[1]**2 - X[2])
+ 
             #TODO: (6) 곡률 기반 속도 계획
             '''
             # 계산 한 곡률 반경을 이용하여 최고 속도를 계산합니다.
             # 평평한 도로인 경우 최대 속도를 계산합니다. 
             # 곡률 반경 x 중력가속도 x 도로의 마찰 계수 계산 값의 제곱근이 됩니다.
             v_max = 
-
             '''
+            v_max = sqrt( r * 9.81 * self.road_friction)
+
             if v_max > self.car_max_speed:
                 v_max = self.car_max_speed
 

@@ -60,8 +60,18 @@ def non_maximum_supression(bboxes, threshold=0.3):
 
             overlap_area =
             '''
-            if overlap_area < threshold:
-                
+            x_overlap = max(0, min(x1_br, x2_br) - max(x1_tl, x2_tl))
+            y_overlap = max(0, min(y1_br, y2_br) - max(y1_tl, y2_tl))
+            overlap_area = x_overlap * y_overlap
+            
+            area_1 = bbox[2] * bbox[3]
+            area_2 = new_bbox[2] * new_bbox[3]
+            
+            total_area = area_1 + area_2 - overlap_area
+
+            overlap_ratio = overlap_area / float(total_area)
+            
+            if overlap_ratio < threshold:
                 new_bboxes.append(bbox)
 
     return new_bboxes

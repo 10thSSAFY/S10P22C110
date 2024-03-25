@@ -65,7 +65,9 @@ class lc_path_pub :
         self.local_path_pub = 
 
         '''
-
+        rospy.Subscriber( "odom", Odometry, self.odom_callback )
+        self.global_path_pub = rospy.Publisher("/global_path", Path, queue_size=10)
+        self.local_path_pub = rospy.Publisher("/lane_change_path", Path, queue_size=10)
         self.lc_1=Path()
         self.lc_1.header.frame_id='/map'
         self.lc_2=Path()
@@ -86,12 +88,41 @@ class lc_path_pub :
         self.f.close()
 
         '''
+        lc_1 = pkg_path + '/path' + '/lc_1.txt'
+        self.f=open(lc_1,'r')
+
+        lines = self.f.readlines()
+
+        for line in lines :
+            tmp = line.split()
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = float(tmp[0])
+            read_pose.pose.position.y = float(tmp[1])
+            read_pose.pose.orientation.w = 1
+            self.lc_1.poses.append(read_pose)    
+
+        self.f.close()
+
+        lc_2 = pkg_path + '/path' + '/lc_2.txt'
+        self.f=open(lc_2,'r')
+
+        lines = self.f.readlines()
+
+        for line in lines :
+            tmp = line.split()
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = float(tmp[0])
+            read_pose.pose.position.y = float(tmp[1])
+            read_pose.pose.orientation.w = 1
+            self.lc_2.poses.append(read_pose)  
+
+        self.f.close()
 
         self.is_object_info = False
         self.is_odom = False
 
         self.local_path_size = 50
-        
+
         self.lane_change = False        
         self.current_lane = 1
 
@@ -101,6 +132,7 @@ class lc_path_pub :
         global_path = self.lc_1
 
         '''
+        global_path = self.lc_1
 
         rate = rospy.Rate(10) # 10hz
         while not rospy.is_shutdown():
@@ -123,6 +155,8 @@ class lc_path_pub :
                 self.global_path_pub.
                 
                 '''
+                self.local_path_pub.publish(self.local_path_msg)
+                self.global_path_pub.publish(global_path)
 
             rate.sleep()
 
@@ -285,6 +319,19 @@ class lc_path_pub :
                                 min_rel_distance = 
                                 self.object=[True,i]
         '''
+        if len(global_vaild_object) >0  :
+            min_rel_distance = float('inf')
+            for i in range(len(global_vaild_object)):
+                for path in ref_path.poses :   
+                    if global_vaild_object[i][0]==1 or global_vaild_object[i][0]==2 :  
+                        dx = global_vaild_object[i][1] - path.pose.position.x
+                        dy = global_vaild_object[i][2] - path.pose.position.y
+                        dis = sqrt(dx**2 + dy**2)
+                        if dis<2.5:
+                            rel_distance= dis                    
+                            if rel_distance < min_rel_distance:
+                                min_rel_distance = rel_distance
+                                self.object=[True,i]
 
     def getLaneChangePath(self,ego_path,lc_path,start_point,end_point,start_next_point, end_waypoint_idx): ## 
         out_path=Path()  
@@ -308,6 +355,14 @@ class lc_path_pub :
         det_trans_matrix = np.linalg.inv(trans_matrix)
 
         '''
+        translation = [start_point.pose.position.x, start_point.pose.position.y]
+        theta = atan2(start_next_point.pose.position.y - start_point.pose.position.y, start_next_point.pose.position.x - start_point.pose.position.x)
+
+        trans_matrix = np.array([[cos(theta), -sin(theta), translation[0]],
+                                [sin(theta), cos(theta), translation[1]],
+                                [0, 0, 1]])
+
+        det_trans_matrix = np.linalg.inv(trans_matrix)
 
         world_end_point=np.array([[end_point.pose.position.x],[end_point.pose.position.y],[1]])
         local_end_point=det_trans_matrix.dot(world_end_point)
@@ -352,6 +407,14 @@ class lc_path_pub :
             waypoints_y.append(result)
 
         '''
+        a = - (2 * y_end - 2 * y_start) / pow(x_end, 3)
+        b = (3 * y_end - 3 * y_start) / pow(x_end, 2)
+        c = 0
+        d = y_start
+
+        for i in waypoints_x:
+            result = a * pow(i, 3) + b * pow(i, 2) + c * i + d
+            waypoints_y.append(result)
 
         #TODO: (8) ros path 메시지 형식 경로 데이터 생성
         '''
@@ -392,6 +455,30 @@ class lc_path_pub :
 
 
         '''
+        for i in range(0, len(waypoints_y)):
+            local_result = np.array([[waypoints_x[i]], [waypoints_y[i]], [1]])
+            global_result = trans_matrix.dot(local_result)
+
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = global_result[0][0]
+            read_pose.pose.position.y = global_result[1][0]
+            read_pose.pose.position.z = 0.
+            read_pose.pose.orientation.x = 0
+            read_pose.pose.orientation.y = 0
+            read_pose.pose.orientation.z = 0
+            read_pose.pose.orientation.w = 1
+            out_path.poses.append(read_pose)
+
+        for k in range(end_waypoint_idx, end_waypoint_idx + 40):
+            read_pose = PoseStamped()
+            read_pose.pose.position.x = lc_path.poses[k].pose.position.x
+            read_pose.pose.position.y = lc_path.poses[k].pose.position.y
+            read_pose.pose.position.z = 0
+            read_pose.pose.orientation.x = 0
+            read_pose.pose.orientation.y = 0
+            read_pose.pose.orientation.z = 0
+            read_pose.pose.orientation.w = 1
+            out_path.poses.append(read_pose)
 
         return out_path
 
@@ -399,4 +486,4 @@ if __name__ == '__main__':
     try:
         test_track=lc_path_pub()
     except rospy.ROSInterruptException:
-        pass
+        pass 

@@ -31,13 +31,16 @@ class local_path_pub :
         rospy.Subscriber( global path 메세지 콜백 완성하기 )
 
         '''
+        rospy.Subscriber("/odom", Odometry, self.odom_callback)
+        rospy.Subscriber("/global_path", Path, self.global_path_callback)
 
         #TODO: (2) Local Path publisher 선언
         '''
         # local Path 데이터를 Publish 하는 변수를 선언한다.
         self.local_path_pub = rospy.Publisher('/local_path',Path, queue_size=1)
 
-        '''
+        ''' 
+        self.local_path_pub = rospy.Publisher('/local_path',Path, queue_size=1)
         
         # 초기화
         self.is_odom = False
@@ -51,6 +54,8 @@ class local_path_pub :
         self.local_path_size = 
 
         '''
+        self.local_path_size = 100
+
         rate = rospy.Rate(20) # 20hz
         while not rospy.is_shutdown():
    
@@ -72,6 +77,13 @@ class local_path_pub :
                 for  in  :
 
                 '''
+                min_dis = float('inf')
+                current_waypoint = -1
+                for idx, pose in enumerate(self.global_path_msg.poses) :
+                    distance = sqrt((pose.pose.position.x - x) ** 2 + (pose.pose.position.y - y) ** 2)
+                    if distance < min_dis:
+                        min_dis = distance
+                        current_waypoint = idx
                 
                 #TODO: (6) 가장 가까운 포인트(current Waypoint) 위치부터 Local Path 생성 및 예외 처리
                 '''
@@ -83,14 +95,21 @@ class local_path_pub :
                     else :
 
                 '''
+                if current_waypoint != -1 :
+                    if current_waypoint + self.local_path_size < len(self.global_path_msg.poses):
+                        local_path_msg.poses = self.global_path_msg.poses[current_waypoint:current_waypoint + self.local_path_size]
+                    else :
+                        local_path_msg.poses = self.global_path_msg.poses[current_waypoint:]
 
                 print(x,y)
+
                 #TODO: (7) Local Path 메세지 Publish
                 '''
                 # Local Path 메세지 를 전송하는 publisher 를 만든다.
                 self.local_path_pub.
                 
                 '''
+                self.local_path_pub.publish(local_path_msg)
 
             rate.sleep()
 
@@ -105,6 +124,8 @@ class local_path_pub :
         self.y = 물체의 y 좌표
 
         '''
+        self.x = msg.pose.pose.position.x
+        self.y = msg.pose.pose.position.y
 
     def global_path_callback(self,msg):
         self.is_path = True

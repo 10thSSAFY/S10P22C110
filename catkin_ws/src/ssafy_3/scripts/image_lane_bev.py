@@ -33,6 +33,14 @@ def warp_image(img, source_prop):
     
     source_points = source_prop * np.float32([[x, y]]* 4)
     '''
+    destination_points = np.float32([
+        [x * 0.0, y * 1.0],  # 왼쪽 아래
+        [x * 0.0, y * 0.0],  # 왼쪽 위
+        [x * 1.0, y * 0.0],  # 오른쪽 위
+        [x * 1.0, y * 1.0]   # 오른쪽 아래
+    ])
+
+    source_points = source_prop * np.float32([[x, y]]*4)
     
     # 이미지를 기하학적 변환을 해야합니다. 이미지를 인위적으로 확대, 축소, 위치 변경, 회전,
     # 왜곡을 하는 것으로 BEV는 원근이 있는 이미지를 원근을 없애는 작업을 해야합니다.
@@ -44,11 +52,14 @@ def warp_image(img, source_prop):
     perspective_transform = cv2.
 
     '''
+    perspective_transform = cv2.getPerspectiveTransform(source_points, destination_points)
+
     #TODO: (4) 이후 원근 맵 행렬에 대한 기하학적 변환을 진행합니다.
     '''
     warped_img = cv2.
 
     '''
+    warped_img = cv2.warpPerspective(img, perspective_transform, image_size, flags=cv2.INTER_LINEAR)
 
     return warped_img
 
@@ -64,6 +75,7 @@ class IMGParser:
         Bird's eye view 를 하기 위한 영역을 지정해야 합니다. 이지미 warping을 위해 영역을 비율로 만들어줘야 합니다.
         self.source_prop = np.float32(
         '''
+        self.source_prop = np.float32([[0.0, 0.90], [0.4, 0.6], [0.6, 0.6], [1.0, 0.90]])
 
     def callback(self, msg):
         try:

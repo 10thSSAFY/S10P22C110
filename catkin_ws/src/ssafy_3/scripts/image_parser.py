@@ -4,7 +4,7 @@
 import rospy
 import cv2
 import numpy as np
-import os, rospkg
+import os, rospkg 
 
 from sensor_msgs.msg import CompressedImage
 from cv_bridge import CvBridgeError
@@ -34,6 +34,10 @@ class IMGParser:
             np_arr = np.fromstring(         )
 
             '''
+
+            np_arr = np.fromstring(msg.data, np.uint8)
+
+
             #TODO: (2)
             '''
             # 1차원 배열 형태로 되어있는 np_arr 변수를 3차원 배열로 만든뒤 컬러 이미지로 변환합니다.
@@ -43,6 +47,10 @@ class IMGParser:
             img_bgr = cv2.imdecode(         )
 
             '''
+            
+            img_bgr = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+
+
         except CvBridgeError as e:
             print(e)
 
@@ -57,6 +65,9 @@ class IMGParser:
         cv2.waitKey(            ) 
 
         '''
+
+        cv2.imshow("Image window", img_bgr)
+        cv2.waitKey(1)
 
 
 if __name__ == '__main__':

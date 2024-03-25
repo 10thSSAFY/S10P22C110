@@ -50,8 +50,6 @@ from lib.mgeo.class_defs import *
 #   [   새로 조사된 최단 거리 : 시작 노드에서 방문 노드 까지의 거리 비용 + 방문 노드에서 인접 노드까지의 거리 비용    ]
 #   [   기존 발견된 최단 거리 : 시작 노드에서 인접 노드까지의 거리 비용                                       ]
 # 5. 3 ~ 4 과정을 반복 
-# 
-
 '''
 class dijkstra_path_pub :
     def __init__(self):
@@ -59,8 +57,8 @@ class dijkstra_path_pub :
 
         self.global_path_pub = rospy.Publisher('/global_path',Path, queue_size = 1)
 
-        rospy.Subscriber('/move_base_simple/goal', PoseStamped, self.goal_callback)
         rospy.Subscriber('/initialpose', PoseWithCovarianceStamped, self.init_callback)
+        rospy.Subscriber('/move_base_simple/goal', PoseStamped, self.goal_callback)
 
         #TODO: (1) Mgeo data 읽어온 후 데이터 확인
         load_path = os.path.normpath(os.path.join(current_path, 'lib/mgeo_data/R_KR_PG_K-City'))
@@ -84,7 +82,6 @@ class dijkstra_path_pub :
                 rospy.loginfo('Waiting goal pose data')
                 rospy.loginfo('Waiting init pose data')
 
-
         self.global_path_msg = Path()
         self.global_path_msg.header.frame_id = '/map'
 
@@ -96,8 +93,8 @@ class dijkstra_path_pub :
             '''
             # dijkstra 이용해 만든 Global Path 메세지 를 전송하는 publisher 를 만든다.
             self.global_path_pub.
-            
             '''
+            self.global_path_pub.publish(self.global_path_msg)
             rate.sleep()
     
     def init_callback(self,msg):
@@ -110,11 +107,23 @@ class dijkstra_path_pub :
         # PoseWithCovarianceStamped 형식의 ROS 메세지를 Publish 합니다.
         # 해당 형식의 메세지를 Subscribe 해서  2D Pose Estimate 로 지정한 위치와 가장 가까운 노드를 탐색하는 합니다.
         # 가장 가까운 Node 가 탐색 된다면 이를 "self.start_node" 변수에 해당 Node Idx 를 지정합니다.
+        '''
+        click_x = msg.pose.pose.position.x
+        click_y = msg.pose.pose.position.y
+        click_z = msg.pose.pose.position.z
+
+        min_dist = float('inf')
+
+        for node_id, node in self.nodes.items():
+            node_x = node.point[0]
+            node_y = node.point[1]
+            node_z = node.point[2]
+            dist = sqrt((click_x - node_x) ** 2 + (click_y - node_y) ** 2 + (click_z - node_z) ** 2)
+            if dist < min_dist:
+                min_dist = dist
+                node_idx = node_id
 
         self.start_node = node_idx
-
-        '''
-
         self.is_init_pose = True
 
     def goal_callback(self,msg):
@@ -127,24 +136,45 @@ class dijkstra_path_pub :
         # PoseStamped 형식의 ROS 메세지를 Publish 합니다.
         # 해당 형식의 메세지를 Subscribe 해서  2D Nav Goal 로 지정한 위치와 가장 가까운 노드를 탐색하는 합니다.
         # 가장 가까운 Node 가 탐색 된다면 이를 "self.start_node" 변수에 해당 Node Idx 를 지정합니다.
+        self.end_node = node_idx
+        '''
+        click_x = msg.pose.position.x
+        click_y = msg.pose.position.y
+        click_z = msg.pose.position.z
+
+        min_dist = float('inf')
+
+        for node_id, node in self.nodes.items():
+            node_x = node.point[0]
+            node_y = node.point[1]
+            node_z = node.point[2]
+            dist = sqrt((click_x - node_x) ** 2 + (click_y - node_y) ** 2 + (click_z - node_z) ** 2)
+            if dist < min_dist:
+                min_dist = dist
+                node_idx = node_id
 
         self.end_node = node_idx
-
-        '''
-
         self.is_goal_pose = True
 
     def calc_dijkstra_path_node(self, start_node, end_node):
 
         result, path = self.global_planner.find_shortest_path(start_node, end_node)
+        if not result:
+            rospy.logwarn("No path found")
+            return None
 
         #TODO: (10) dijkstra 경로 데이터를 ROS Path 메세지 형식에 맞춰 정의
         out_path = Path()
         out_path.header.frame_id = '/map'
         '''
         # dijkstra 경로 데이터 중 Point 정보를 이용하여 Path 데이터를 만들어 줍니다.
-
         '''
+        for point in path['point_path']:
+            pose = PoseStamped()
+            pose.pose.position.x = point[0]
+            pose.pose.position.y = point[1]
+            pose.pose.position.z = point[2]
+            out_path.poses.append(pose)
 
         return out_path
 
@@ -166,7 +196,6 @@ class Dijkstra:
         # Key 값으로 Node의 Idx Value 값으로 다른 노드 까지의 비용을 가지도록 합니다.
         # 아래 코드 중 self.find_shortest_link_leading_to_node 를 완성하여 
         # Dijkstra 알고리즘 계산을 위한 Node와 Node 사이의 최단 거리를 계산합니다.
-
         '''
         # 초기 설정
         weight = dict() 
@@ -195,8 +224,14 @@ class Dijkstra:
         '''
         # 최단거리 Link 인 shortest_link 변수와
         # shortest_link 의 min_cost 를 계산 합니다.
-
         '''
+        shortest_link = None
+        min_cost = float('inf')
+        for link in from_node.get_to_links():
+            if link.to_node.idx == to_node.idx:
+                if link.cost < min_cost:
+                    min_cost = link.cost
+                    shortest_link = link
 
         return shortest_link, min_cost
         
@@ -223,14 +258,12 @@ class Dijkstra:
         # from_node 의 Value 값은 Key 값의 Node Idx 에서 가장 비용이 작은(가장 가까운) Node Idx로 합니다.
         # from_node 통해 각 Node 에서 가장 가까운 Node 찾고
         # 이를 연결해 시작 노드부터 도착 노드 까지의 최단 경로를 탐색합니다. 
-
         '''
         s = dict()
         from_node = dict() 
         for node_id in self.nodes.keys():
             s[node_id] = False
             from_node[node_id] = start_node_idx
-
         s[start_node_idx] = True
         distance =copy.deepcopy(self.weight[start_node_idx])
 
@@ -281,5 +314,4 @@ class Dijkstra:
         return True, {'node_path': node_path, 'link_path':link_path, 'point_path':point_path}
 
 if __name__ == '__main__':
-    
     dijkstra_path_pub = dijkstra_path_pub()

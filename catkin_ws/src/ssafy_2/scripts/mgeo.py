@@ -29,7 +29,6 @@ from lib.mgeo.class_defs import *
 # 각각의 Node Link 정보는 이름인 idx 정보를 가집니다 idx 는 중복 될 수 없습니다. 
 # to_links , from_links , to_node , from_node ... 등 
 # MGeo에 정의되어 있는 데이터를 활용해 각 Node 와 Link 간 연결 성을 나타낼 수 있습니다.
-# 
 
 '''
 load_path = os.path.normpath(os.path.join(current_path, 'lib/mgeo_data/R_KR_PG_K-City'))
