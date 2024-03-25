@@ -35,9 +35,9 @@ pipeline {
 def dockerComposeUp(service = null) {
     script {
         if (service != null) {
-            sh "docker-compose up -d $service"
+            sh "docker-compose up -d --build $service"
         } else {
-            sh "docker-compose up -d"
+            sh "docker-compose up -d --build"
         }
     }
 }
