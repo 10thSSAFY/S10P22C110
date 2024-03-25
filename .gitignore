@@ -11,6 +11,7 @@
 .sudo_as_admin_successful
 .vim/
 .viminfo
+.vscode/
 .vscode-server/
 .wget-hsts
 build/
