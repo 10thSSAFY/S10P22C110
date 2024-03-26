@@ -1,5 +1,5 @@
 # 기본 이미지로 OpenJDK가 포함된 이미지를 사용합니다.
-FROM openjdk:17 AS build
+FROM openjdk:17-jdk-alpine AS builder
 
 # 소스 코드와 빌드 도구를 컨테이너에 복사합니다.
 COPY . /home/app
