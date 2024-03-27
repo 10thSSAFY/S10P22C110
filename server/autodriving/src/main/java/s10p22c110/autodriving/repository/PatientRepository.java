@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import s10p22c110.autodriving.model.Patient;
 
 @Repository
-public interface DepartualRepository extends JpaRepository<Patient, Long>{
+public interface PatientRepository extends JpaRepository<Patient, Long>{
     
 }
