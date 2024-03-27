@@ -37,9 +37,9 @@ public class CarController {
 
     // 특정 ID를 가진 Car의 lat과 lon 데이터 값을 수정
     @PutMapping("/{id}")
-    public ResponseEntity<Car> updateCarLocation(@PathVariable Long id, @RequestBody Map<String, Double> location) {
-        double lat = location.get("lat");
-        double lon = location.get("lon");
+    public ResponseEntity<Car> updateCarLocation(@PathVariable Long id, @RequestBody Map<String, String> location) {
+        String lat = location.get("lat");
+        String lon = location.get("lon");
         Car updateCar = carService.updateCarLocation(id, lat, lon);
         return ResponseEntity.ok(updateCar);
     }

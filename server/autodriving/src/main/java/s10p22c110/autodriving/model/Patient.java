@@ -20,17 +20,17 @@ public class Patient {
     private Long id;
     
     @Column(name = "lat")
-    private double lat;
+    private String lat;
 
     @Column(name = "lon")
-    private double lon;
+    private String lon;
 
     // 기본 생성자
     public Patient() {
     }
 
     // 모든 필드를 포함한 생성자
-    public Patient(double lat, double lon) {
+    public Patient(String lat, String lon) {
         this.lat = lat;
         this.lon = lon;
     }
