@@ -90,9 +90,9 @@ class pure_pursuit :
 
         self.vehicle_length = 2.6
         self.lfd = 8
-        self.min_lfd = 5
+        self.min_lfd = 6
         self.max_lfd = 30
-        self.lfd_gain = 0.78
+        self.lfd_gain = 0.79
         self.target_velocity = 40
 
         self.pid = pidControl()
@@ -261,8 +261,8 @@ class pure_pursuit :
 
 class pidControl:
     def __init__(self):
-        self.p_gain = 0.3
-        self.i_gain = 0.00
+        self.p_gain = 0.38
+        self.i_gain = 0.01
         self.d_gain = 0.03
         self.prev_error = 0
         self.i_control = 0

@@ -262,7 +262,7 @@ class lc_path_pub :
         # 차선변경을 시작하면 경로 상 장애물은 체크 하지 않도록 합니다.
 
         '''
-        lane_change_distance = 20 * 2 # (point-to-point distance 0.5m)
+        lane_change_distance = 30 * 2 # (point-to-point distance 0.5m)
 
         if self.lane_change == True:
             if currnet_waypoint + self.local_path_size > len(global_path.poses):
@@ -320,7 +320,7 @@ class lc_path_pub :
                                 min_rel_distance = 
                                 self.object=[True,i]
         '''
-        if len(global_vaild_object) >0  :
+        if len(global_vaild_object) > 0  :
             min_rel_distance = float('inf')
             for i in range(len(global_vaild_object)):
                 for path in ref_path.poses :   
@@ -328,7 +328,7 @@ class lc_path_pub :
                         dx = global_vaild_object[i][1] - path.pose.position.x
                         dy = global_vaild_object[i][2] - path.pose.position.y
                         dis = sqrt(dx**2 + dy**2)
-                        if dis<3:
+                        if dis < 2.5:
                             rel_distance= dis                    
                             if rel_distance < min_rel_distance:
                                 min_rel_distance = rel_distance

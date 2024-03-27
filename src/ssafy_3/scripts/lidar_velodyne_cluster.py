@@ -4,6 +4,7 @@
 import rospy
 import cv2
 import numpy as np
+from math import atan2, sqrt
 
 from sensor_msgs.msg import PointCloud2
 import sensor_msgs.point_cloud2 as pc2
@@ -22,12 +23,10 @@ from sklearn.cluster import DBSCAN
 class SCANCluster:
     def __init__(self):
 
-        self.scan_sub = rospy.Subscriber("/velodyne_points", PointCloud2, self.callback)
-
-        self.cluster_pub = rospy.Publisher("/clusters", PoseArray, queue_size=10)
+        self.scan_sub = rospy.Subscriber("/lidar3D", PointCloud2, self.callback)
+        self.cluster_pub = rospy.Publisher("clusters", PoseArray, queue_size=10)
 
         self.pc_np = None
-
         #TODO: (1) DBSCAN Parameter 입력
         '''
         # DBSCAN의 Parameter를 결정하는 영역입니다.
@@ -35,43 +34,29 @@ class SCANCluster:
 
         self.dbscan = DBSCAN( , , ...)
         '''
-        eps = 0.3  # 클러스터 간의 최대 거리
-        min_samples = 1  # 클러스터에 포함되어야 할 최소 샘플 수
-        self.dbscan = DBSCAN(0.3, 1)
+        self.dbscan = DBSCAN(eps=0.5, min_samples=5)
     
-    def callback(self, msg):    
+    def callback(self, msg):   
         self.pc_np = self.pointcloud2_to_xyz(msg)
         if len(self.pc_np) == 0:
-
             cluster_msg = PoseArray()
-
         else:
             pc_xy = self.pc_np[:, :2]
-
             db = self.dbscan.fit_predict(pc_xy)
-
-            n_cluster = np.max(db) + 1
-
+            unique_labels = set(db)
             cluster_msg = PoseArray()
-
             
-            for cluster in range(n_cluster):
-                #TODO: (2) 각 Cluster를 대표하는 위치 값 계산                
-                '''
-                # DBSCAN으로 Clustering 된 각 Cluster의 위치 값을 계산하는 영역입니다.
-                # Cluster에 해당하는 Point들을 활용하여 Cluster를 대표할 수 있는 위치 값을 계산합니다.
-                # 계산된 위치 값을 ROS geometry_msgs/Pose type으로 입력합니다.
-                # Input : cluster
-                # Output : cluster position x,y   
-
-                tmp_pose=Pose()
-                #tmp_pose.position.x = 
-                #tmp_pose.position.y = 
-                '''
-                tmp_pose=Pose()
-                tmp_pose.position.x = cluster.center[0]
-                tmp_pose.position.y = cluster.center[1]
-                cluster_msg.poses.append(cluster_list)
+            for k in unique_labels:
+                if k == -1:
+                    # '-1'은 잡음을 의미합니다.
+                    continue
+                class_member_mask = (db == k)
+                xy_cluster = pc_xy[class_member_mask]
+                centroid = np.mean(xy_cluster, axis=0)
+                pose = Pose()
+                pose.position.x = centroid[0]
+                pose.position.y = centroid[1]
+                cluster_msg.poses.append(pose)
                 
         self.cluster_pub.publish(cluster_msg)
 
@@ -89,15 +74,18 @@ class SCANCluster:
             dist = 
             angle = 
             '''
-            dist = np.sqrt(x**2 + y**2 + z**2)
-            angle = np.arctan2(y, x)
+
+            dist = sqrt(point[0]**2 + point[1]**2 + point[2]**2)
+            angle = atan2(point[1], point[0])
             
-            if point[0] > 0 and 1.50 > point[2] > -1.25 and dist < 50:
+            if point[0] > 0 and point[2] > -1 and point[2] < 1 and 1 < dist:
                 point_list.append((point[0], point[1], point[2], point[3], dist, angle))
 
         point_np = np.array(point_list, np.float32)
 
         return point_np
+
+
 
 if __name__ == '__main__':
 
@@ -105,4 +93,4 @@ if __name__ == '__main__':
 
     scan_cluster = SCANCluster()
 
-    rospy.spin() 
+    rospy.spin()
