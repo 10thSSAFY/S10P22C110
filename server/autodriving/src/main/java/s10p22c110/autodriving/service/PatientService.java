@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import s10p22c110.autodriving.model.Patient;
-import s10p22c110.autodriving.repository.DepartualRepository;
+import s10p22c110.autodriving.repository.PatientRepository;
 
 @Service
-public class DepartualService {
+public class PatientService {
 
     @Autowired
-    private DepartualRepository departualRepository;
+    private PatientRepository departualRepository;
 
     public Patient saveDepartual(Patient departual) {
         if (departual == null) {
@@ -34,5 +34,21 @@ public class DepartualService {
         }
         Optional<Patient> patient = departualRepository.findById(id);
         return patient.orElse(null);
+    }
+
+    // 특정 ID를 가진 Patient의 lat과 lon 데이터 값을 수정하는 메소드
+    public Patient updatePatientLocation(Long id, double lat, double lon) {
+        if (id == null) {
+            throw new IllegalArgumentException("ID cannot be null.");
+        }
+        Optional<Patient> patientOptional = departualRepository.findById(id);
+        if (patientOptional.isPresent()) {
+            Patient patient = patientOptional.get();
+            patient.setLat(lat);
+            patient.setLon(lon);
+            return departualRepository.save(patient);
+        } else {
+            throw new IllegalArgumentException("Patient with ID " + id + " not found.");
+        }
     }
 }
