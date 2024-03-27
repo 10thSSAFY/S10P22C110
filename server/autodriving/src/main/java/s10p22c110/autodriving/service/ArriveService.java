@@ -23,14 +23,20 @@ public class ArriveService {
         Patient patient = patientRepository.findById(id).orElseThrow();
         Car car = carRepository.findById(id).orElseThrow();
 
-        double distance = calculateDistance(patient.getLat(), patient.getLon(), car.getLat(), car.getLon());
+        double patientLat = Double.parseDouble(patient.getLat());
+        double patientLon = Double.parseDouble(patient.getLon());
+        double carLat = Double.parseDouble(car.getLat());
+        double carLon = Double.parseDouble(car.getLon());
 
-        return distance <= 0.00001; // SOME_THRESHOLD는 오차 범위를 정의합니다.
+        double distance = calculateDistance(patientLat, patientLon, carLat, carLon);
+
+        return distance <= 0.00001; // 오차 범위를 정의합니다.
     }
 
     private double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+        // 간단한 직선 거리 계산
         double lat = Math.abs(lat1 - lat2);
         double lon = Math.abs(lon1 - lon2);
-        return lat + lon; // 예시 코드이므로 실제 구현이 필요합니다.
+        return Math.sqrt(lat * lat + lon * lon); // 직선 거리 계산
     }    
 }

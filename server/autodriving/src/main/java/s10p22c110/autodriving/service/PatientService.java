@@ -37,7 +37,7 @@ public class PatientService {
     }
 
     // 특정 ID를 가진 Patient의 lat과 lon 데이터 값을 수정하는 메소드
-    public Patient updatePatientLocation(Long id, double lat, double lon) {
+    public Patient updatePatientLocation(Long id, String lat, String lon) {
         if (id == null) {
             throw new IllegalArgumentException("ID cannot be null.");
         }

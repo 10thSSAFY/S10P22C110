@@ -20,17 +20,17 @@ public class Car {
     private Long id;
 
     @Column(name = "lat")
-    private double lat;
+    private String lat;
 
     @Column(name = "lon")
-    private double lon;
+    private String lon;
 
     // 기본 생성자
     public Car() {
     }
 
     // 모든 필드를 포함한 생성자
-    public Car(double lat, double lon) {
+    public Car(String lat, String lon) {
         this.lat = lat;
         this.lon = lon;
     }
