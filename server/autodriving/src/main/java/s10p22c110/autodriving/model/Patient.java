@@ -1,5 +1,8 @@
 package s10p22c110.autodriving.model;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,5 +36,16 @@ public class Patient {
     public Patient(String lat, String lon) {
         this.lat = lat;
         this.lon = lon;
+    }
+    // 객체를 JSON 문자열로 변환하는 메서드
+    public String toJsonString() throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(this);
+    }
+
+    // JSON 문자열을 객체로 변환하는 메서드
+    public static Patient fromJsonString(String jsonString) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(jsonString, Patient.class);
     }
 }
