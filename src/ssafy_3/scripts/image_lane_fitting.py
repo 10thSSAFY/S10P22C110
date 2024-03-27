@@ -64,8 +64,8 @@ class IMGParser:
 
         curve_learner = CURVEFit(order=, lane_width= ,y_margin=, x_range=, min_pts=)
         '''
-        curve_learner = CURVEFit(order=3, alpha=0.7, lane_width=1.8, y_margin=1.6, x_range=5, dx=0.03, min_pts=10)
         #END
+        curve_learner = CURVEFit(order=3, alpha=0.1, lane_width=3.5, y_margin=1, x_range=10, dx=0.1, min_pts=10)
         rate = rospy.Rate(10)
 
         while not rospy.is_shutdown():
@@ -400,15 +400,14 @@ class CURVEFit:
                                                         min_samples=self.min_pts,
                                                         residual_threshold=self.y_margin)
         '''
-
-        self.ransac_left = linear_model.RANSACRegressor(base_estimator=linear_model.Lasso(alpha=0.8),
-                                                        max_trials=30,
+        self.ransac_left = linear_model.RANSACRegressor(base_estimator=linear_model.Lasso(alpha=alpha),
+                                                        max_trials=10,
                                                         loss='absolute_loss',
                                                         min_samples=self.min_pts,
                                                         residual_threshold=self.y_margin)
 
-        self.ransac_right = linear_model.RANSACRegressor(base_estimator=linear_model.Lasso(alpha=0.8),
-                                                        max_trials=30,
+        self.ransac_right = linear_model.RANSACRegressor(base_estimator=linear_model.Lasso(alpha=alpha),
+                                                        max_trials=10,
                                                         loss='absolute_loss',
                                                         min_samples=self.min_pts,
                                                         residual_threshold=self.y_margin)

@@ -407,7 +407,7 @@ class lc_path_pub :
             waypoints_y.append(result)
 
         '''
-        a = -(2 * y_end - 2 * y_start) / pow(x_end, 3)
+        a = - (2 * y_end - 2 * y_start) / pow(x_end, 3)
         b = (3 * y_end - 3 * y_start) / pow(x_end, 2)
         c = 0
         d = y_start
@@ -486,4 +486,4 @@ if __name__ == '__main__':
     try:
         test_track=lc_path_pub()
     except rospy.ROSInterruptException:
-        pass
+        pass 
