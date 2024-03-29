@@ -9,6 +9,7 @@ from math import cos,sin,pi,sqrt,pow,atan2
 from geometry_msgs.msg import Point,PoseWithCovarianceStamped
 from nav_msgs.msg import Odometry,Path
 from morai_msgs.msg import CtrlCmd,EgoVehicleStatus
+from std_msgs.msg import String
 import numpy as np
 import tf
 from tf.transformations import euler_from_quaternion,quaternion_from_euler
@@ -52,10 +53,10 @@ class pure_pursuit :
         # launch 파일의 <arg> 태그를 사용하여 예제에 맞게 변수를 설정합니다.
         
         '''
-        arg = rospy.myargv(argv=sys.argv)
-        local_path_name = arg[1]
+        # arg = rospy.myargv(argv=sys.argv)
+        # local_path_name = arg[1]
 
-        rospy.Subscriber(local_path_name, Path, self.path_callback)
+        rospy.Subscriber('/selected_path', Path, self.path_callback)
 
         #TODO: (1) subscriber, publisher 선언
         '''
@@ -71,8 +72,12 @@ class pure_pursuit :
 
         '''
         rospy.Subscriber("/global_path", Path, self.global_path_callback )
-        rospy.Subscriber("odom", Odometry, self.odom_callback )
+        rospy.Subscriber("/odom", Odometry, self.odom_callback )
         rospy.Subscriber("/Ego_topic", EgoVehicleStatus , self.status_callback )
+
+        rospy.Subscriber("/check", String, self.message_callback)
+        rospy.Subscriber("/cp_distance", String, self.distance_callback)
+
         self.ctrl_cmd_pub = rospy.Publisher("/ctrl_cmd", CtrlCmd, queue_size=10)
 
         self.ctrl_cmd_msg = CtrlCmd()
@@ -83,7 +88,13 @@ class pure_pursuit :
         self.is_status = False
         self.is_global_path = False
 
+        self.is_enter = False
+        self.cnt = 0
+
         self.is_look_forward_point = False
+
+        self.check_msg = String()
+        self.distance_msg = String()
 
         self.forward_point = Point()
         self.current_postion = Point()
@@ -93,7 +104,7 @@ class pure_pursuit :
         self.min_lfd = 6
         self.max_lfd = 30
         self.lfd_gain = 0.79
-        self.target_velocity = 40
+        self.target_velocity = 50
 
         self.pid = pidControl()
         self.vel_planning = velocityPlanning(self.target_velocity/3.6, 0.15)
@@ -106,30 +117,42 @@ class pure_pursuit :
 
         rate = rospy.Rate(30) # 30hz
         while not rospy.is_shutdown():
-            
-
             if self.is_path == True and self.is_odom == True and self.is_status == True:
                 prev_time = time.time()
                 
                 self.current_waypoint = self.get_current_waypoint(self.status_msg,self.global_path)
                 self.target_velocity = self.velocity_list[self.current_waypoint]*3.6
-                
+                # if self.check_msg == "lane":
+                #     self.target_velocity = 5
 
                 steering = self.calc_pure_pursuit()
                 if self.is_look_forward_point :
                     self.ctrl_cmd_msg.steering = steering
                 else : 
-                    rospy.loginfo("no found forward point")
+                    # rospy.loginfo("no found forward point")
                     self.ctrl_cmd_msg.steering = 0.0
                 
-                output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6)
+                # print(self.check_msg)
 
+                output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6, self.distance_msg)
+                
+                if self.check_msg == String("lane") and output > 0:
+                    output = output * 0.3
+                
                 if output > 0.0:
                     self.ctrl_cmd_msg.accel = output
                     self.ctrl_cmd_msg.brake = 0.0
                 else:
                     self.ctrl_cmd_msg.accel = 0.0
                     self.ctrl_cmd_msg.brake = -output
+
+                if self.check_msg == String("lane") and self.cnt < 45:
+                    self.ctrl_cmd_msg.accel = 0.0
+                    self.ctrl_cmd_msg.brake = 100
+                    self.cnt = self.cnt + 1
+
+                if self.check_msg == String("lattice"):
+                    self.cnt = 0
 
                 #TODO: (8) 제어입력 메세지 Publish
                 '''
@@ -140,6 +163,13 @@ class pure_pursuit :
                 self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
 
             rate.sleep()
+
+    def message_callback(self,msg):
+        self.check_msg = msg
+
+
+    def distance_callback(self,msg):
+        self.distance_msg = msg
 
     def path_callback(self,msg):
         self.is_path=True
@@ -190,7 +220,7 @@ class pure_pursuit :
         '''
         self.lfd = self.lfd_gain * self.status_msg.velocity.x
         self.lfd = min(max(self.lfd, self.min_lfd), self.max_lfd)
-        rospy.loginfo(self.lfd)
+        # rospy.loginfo(self.lfd)
         
         vehicle_position=self.current_postion
         self.is_look_forward_point= False
@@ -267,8 +297,9 @@ class pidControl:
         self.prev_error = 0
         self.i_control = 0
         self.controlTime = 0.02
+        self.pause_time = 0
 
-    def pid(self,target_vel, current_vel):
+    def pid(self,target_vel, current_vel, distance_msg):
         error = target_vel - current_vel
 
         #TODO: (5) PID 제어 생성
@@ -285,6 +316,11 @@ class pidControl:
         self.prev_error = 
 
         '''
+        if  distance_msg == String("near") and self.pause_time < 450:
+            print("pause")
+            self.pause_time = self.pause_time + 1
+            return -0.2
+        
         p_control = self.p_gain * error
         self.i_control += self.i_gain * error * self.controlTime
         d_control = self.d_gain * (error - self.prev_error) / self.controlTime

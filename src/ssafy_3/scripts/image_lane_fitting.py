@@ -65,7 +65,7 @@ class IMGParser:
         curve_learner = CURVEFit(order=, lane_width= ,y_margin=, x_range=, min_pts=)
         '''
         #END
-        curve_learner = CURVEFit(order=3, alpha=0.1, lane_width=3.5, y_margin=1, x_range=10, dx=0.1, min_pts=10)
+        curve_learner = CURVEFit(order=3, alpha=1, lane_width=3.5, y_margin=1, x_range=10, dx=0.1, min_pts=10)
         rate = rospy.Rate(10)
 
         while not rospy.is_shutdown():
