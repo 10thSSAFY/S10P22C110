@@ -53,10 +53,10 @@ class pure_pursuit :
         # launch 파일의 <arg> 태그를 사용하여 예제에 맞게 변수를 설정합니다.
         
         '''
-        # arg = rospy.myargv(argv=sys.argv)
-        # local_path_name = arg[1]
+        arg = rospy.myargv(argv=sys.argv)
+        local_path_name = arg[1]
 
-        rospy.Subscriber('/selected_path', Path, self.path_callback)
+        rospy.Subscriber(local_path_name, Path, self.path_callback)
 
         #TODO: (1) subscriber, publisher 선언
         '''
