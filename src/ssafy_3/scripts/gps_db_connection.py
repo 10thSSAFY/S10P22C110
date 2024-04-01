@@ -36,6 +36,7 @@ class GPSUpload:
 
             if self.patient_lat is not None and self.patient_lon is not None:
                 distance = self.calculate_distance(car_lat, car_lon, float(self.patient_lat), float(self.patient_lon))
+                print(distance)
                 if distance <= 50:
                     print("Patient is within 50 meters!")
                     self.distance_publisher.publish("near")
