@@ -22,7 +22,7 @@ class pure_pursuit :
         arg = rospy.myargv(argv=sys.argv)
         local_path_name = arg[1]
         rospy.Subscriber(local_path_name, Path, self.path_callback)
-        
+
         # rospy.Subscriber("/selected_path", Path, self.path_callback)
 
         rospy.Subscriber("/global_path", Path, self.global_path_callback )
@@ -45,6 +45,7 @@ class pure_pursuit :
 
         self.is_enter = False
         self.cnt = 0
+        self.pause_time = 0
 
         self.is_look_forward_point = False
 
@@ -91,6 +92,20 @@ class pure_pursuit :
                 # if self.check_msg == "lane":
                 #     self.target_velocity = 5
 
+                if not self.distance_msg == String("far"):
+                    if self.distance_msg == String("near") and self.pause_time < 450:
+                        self.pause_time = self.pause_time + 1
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = 1
+                        self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
+                        continue
+        
+                    elif self.distance_msg == String("stop"):
+                        self.ctrl_cmd_msg.accel = 0.0
+                        self.ctrl_cmd_msg.brake = 1
+                        self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
+                        continue
+
                 steering = self.calc_pure_pursuit()
                 if self.is_look_forward_point :
                     self.ctrl_cmd_msg.steering = steering
@@ -104,7 +119,7 @@ class pure_pursuit :
                 self.target_velocity = self.adaptive_cruise_control.get_target_velocity(local_npc_info, local_ped_info, local_obs_info,
                                                                                                         self.status_msg.velocity.x, self.target_velocity/3.6)
 
-                output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6, self.distance_msg)
+                output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6)
                 
                 if self.check_msg == String("lane") and output > 0:
                     output = output * 0.2
@@ -116,13 +131,25 @@ class pure_pursuit :
                     self.ctrl_cmd_msg.accel = 0.0
                     self.ctrl_cmd_msg.brake = -output
 
-                if self.check_msg == String("lane") and self.cnt < 75:
+                if self.check_msg == String("lane") and self.cnt < 60:
                     self.ctrl_cmd_msg.accel = 0.0
-                    self.ctrl_cmd_msg.brake = 100
+                    self.ctrl_cmd_msg.brake = 0.08
+                    self.ctrl_cmd_msg.steering = 0
                     self.cnt = self.cnt + 1
+                elif self.check_msg == String("lane") and output > 0:
+                    self.ctrl_cmd_msg.accel *= 0.2
 
-                if self.check_msg == String("lattice"):
+                if self.check_msg == String("lattice") and self.cnt:
                     self.cnt = 0
+                
+                if self.distance_msg == String("near") and self.pause_time < 450:
+                    self.pause_time = self.pause_time + 1
+                    self.ctrl_cmd_msg.accel = 0.0
+                    self.ctrl_cmd_msg.brake = 1
+        
+                if self.distance_msg == String("stop"):
+                    self.ctrl_cmd_msg.accel = 0.0
+                    self.ctrl_cmd_msg.brake = 1
 
                 self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
 
@@ -265,15 +292,9 @@ class pidControl:
         self.prev_error = 0
         self.i_control = 0
         self.controlTime = 0.02
-        self.pause_time = 0
 
-    def pid(self,target_vel, current_vel, distance_msg):
+    def pid(self,target_vel, current_vel):
         error = target_vel - current_vel
-
-        if  distance_msg == String("near") and self.pause_time < 450:
-            print("pause")
-            self.pause_time = self.pause_time + 1
-            return -0.2
         
         p_control = self.p_gain * error
         self.i_control += self.i_gain * error * self.controlTime
@@ -364,7 +385,7 @@ class AdaptiveCruiseControl:
                         dx = global_npc_info[i][1] - path.pose.position.x
                         dy = global_npc_info[i][2] - path.pose.position.y
                         dis = sqrt(dx**2 + dy**2)
-                        if dis<2:
+                        if dis<4.35:
                             rel_distance = dis
                             if rel_distance < min_rel_distance:
                                 min_rel_distance = rel_distance

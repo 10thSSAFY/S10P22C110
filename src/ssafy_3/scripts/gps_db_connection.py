@@ -26,7 +26,10 @@ class GPSUpload:
         # 환자 GPS 데이터 초기 가져오기
         self.patient_lat = None
         self.patient_lon = None
+        self.dest_lat = None
+        self.dest_lon = None
         self.get_patient_gps_data()
+        self.get_dest_gps_data()
 
     def callback(self, gps_msg):
         current_time = time.time()
@@ -35,11 +38,13 @@ class GPSUpload:
             car_lon = gps_msg.longitude
 
             if self.patient_lat is not None and self.patient_lon is not None:
-                distance = self.calculate_distance(car_lat, car_lon, float(self.patient_lat), float(self.patient_lon))
-                print(distance)
-                if distance <= 50:
+                distance1, distance2 = self.calculate_distance(car_lat, car_lon, float(self.patient_lat), float(self.patient_lon), float(self.dest_lat), float(self.dest_lon))
+                if distance1 <= 50:
                     print("Patient is within 50 meters!")
                     self.distance_publisher.publish("near")
+                elif distance2 <= 30:
+                    print("Destination is within 50 meters!")
+                    self.distance_publisher.publish("stop")
                 else:
                     print("Patient is more than 50 meters away.")
                     self.distance_publisher.publish("far")
@@ -53,35 +58,54 @@ class GPSUpload:
         print("GPS data uploaded to MariaDB")
 
     def get_patient_gps_data(self):
-        query = "SELECT * FROM patient WHERE id = 1"  # 쿼리 수정
+        query = "SELECT * FROM patients WHERE id = 1"
         self.cursor.execute(query)
-        result = self.cursor.fetchone()  # 결과 가져오기
+        result = self.cursor.fetchone()
         if result:
             print("Patient GPS Data:", result)
             self.patient_lat = result['lat']
             self.patient_lon = result['lon']
-            print(self.patient_lat, self.patient_lon)
         else:
             print("No patient data found.")
+    
+    def get_dest_gps_data(self):
+        query = "SELECT * FROM destinations WHERE id = 1"
+        self.cursor.execute(query)
+        result = self.cursor.fetchone() 
+        if result:
+            print("Destination GPS Data:", result)
+            self.dest_lat = result['lat']
+            self.dest_lon = result['lon']
+        else:
+            print("No Destination data found.")
 
-    def calculate_distance(self, lat1, lon1, lat2, lon2):
+    def calculate_distance(self, lat1, lon1, lat2, lon2, lat3, lon3):
         # 지구 반지름 (미터 단위)
         R = 6371000
     
         # 위도, 경도를 라디안으로 변환
         phi1 = math.radians(lat1)
         phi2 = math.radians(lat2)
-        delta_phi = math.radians(lat2 - lat1)
-        delta_lambda = math.radians(lon2 - lon1)
+        delta_phi1 = math.radians(lat2 - lat1)
+        delta_lambda1 = math.radians(lon2 - lon1)
+        delta_phi2 = math.radians(lat3 - lat1)
+        delta_lambda2 = math.radians(lon3 - lon1)
     
         # 허브사인 공식 사용
-        a = math.sin(delta_phi/2) * math.sin(delta_phi/2) + \
+        a1 = math.sin(delta_phi1/2) * math.sin(delta_phi1/2) + \
             math.cos(phi1) * math.cos(phi2) * \
-            math.sin(delta_lambda/2) * math.sin(delta_lambda/2)
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+            math.sin(delta_lambda1/2) * math.sin(delta_lambda1/2)
+        c1 = 2 * math.atan2(math.sqrt(a1), math.sqrt(1-a1))
+
+        a2 = math.sin(delta_phi2/2) * math.sin(delta_phi2/2) + \
+            math.cos(phi2) * math.cos(phi2) * \
+            math.sin(delta_lambda2/2) * math.sin(delta_lambda2/2)
+        c2 = 2 * math.atan2(math.sqrt(a2), math.sqrt(1-a2))
     
-        distance = R * c
-        return distance
+        distance1 = R * c1
+        distance2 = R * c2
+
+        return distance1, distance2
             
 if __name__ == '__main__':
     rospy.init_node('gps_parser', anonymous=True)
