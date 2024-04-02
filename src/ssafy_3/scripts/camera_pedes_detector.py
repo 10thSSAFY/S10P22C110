@@ -109,7 +109,7 @@ class PEDESDetector:
         img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
 
         #TODO: (5)  검출 (paramter 바꿔가면서 설정)
-        (rects_temp, _) = self.pedes_detector.detectMultiScale(img_gray, winStride=(4, 4), padding=(2, 2), scale=32)
+        (rects_temp, _) = self.pedes_detector.detectMultiScale(img_gray, winStride=(8, 8), padding=(8, 8), scale=1.05)
         
         if len(rects_temp) != 0:
             
