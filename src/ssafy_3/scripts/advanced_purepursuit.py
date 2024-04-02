@@ -141,15 +141,6 @@ class pure_pursuit :
 
                 if self.check_msg == String("lattice") and self.cnt:
                     self.cnt = 0
-                
-                if self.distance_msg == String("near") and self.pause_time < 450:
-                    self.pause_time = self.pause_time + 1
-                    self.ctrl_cmd_msg.accel = 0.0
-                    self.ctrl_cmd_msg.brake = 1
-        
-                if self.distance_msg == String("stop"):
-                    self.ctrl_cmd_msg.accel = 0.0
-                    self.ctrl_cmd_msg.brake = 1
 
                 self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
 
@@ -422,27 +413,27 @@ class AdaptiveCruiseControl:
 
             out_vel = ego_vel + acceleration      
 
-        if self.Person[0] and len(local_ped_info) != 0: #ACC ON_Pedestrian
-            print("ACC ON Pedestrian")
-            Pedestrian = [local_ped_info[self.Person[1]][1], local_ped_info[self.Person[1]][2], local_ped_info[self.Person[1]][3]]
+        # if self.Person[0] and len(local_ped_info) != 0: #ACC ON_Pedestrian
+        #     print("ACC ON Pedestrian")
+        #     Pedestrian = [local_ped_info[self.Person[1]][1], local_ped_info[self.Person[1]][2], local_ped_info[self.Person[1]][3]]
             
-            dis_safe = ego_vel* time_gap + default_space
-            dis_rel = sqrt(pow(Pedestrian[0],2) + pow(Pedestrian[1],2))            
-            vel_rel = (Pedestrian[2] - ego_vel)              
-            acceleration = vel_rel * v_gain - x_errgain * (dis_safe - dis_rel)    
+        #     dis_safe = ego_vel* time_gap + default_space
+        #     dis_rel = sqrt(pow(Pedestrian[0],2) + pow(Pedestrian[1],2))            
+        #     vel_rel = (Pedestrian[2] - ego_vel)              
+        #     acceleration = vel_rel * v_gain - x_errgain * (dis_safe - dis_rel)    
 
-            out_vel = ego_vel + acceleration
+        #     out_vel = ego_vel + acceleration
    
-        if self.object[0] and len(local_obs_info) != 0: #ACC ON_obstacle     
-            print("ACC ON Obstacle")                    
-            Obstacle = [local_obs_info[self.object[1]][1], local_obs_info[self.object[1]][2], local_obs_info[self.object[1]][3]]
+        # if self.object[0] and len(local_obs_info) != 0: #ACC ON_obstacle     
+        #     print("ACC ON Obstacle")                    
+        #     Obstacle = [local_obs_info[self.object[1]][1], local_obs_info[self.object[1]][2], local_obs_info[self.object[1]][3]]
             
-            dis_safe = ego_vel* time_gap + default_space
-            dis_rel = sqrt(pow(Obstacle[0],2) + pow(Obstacle[1],2))            
-            vel_rel = (Obstacle[2] - ego_vel)
-            acceleration = vel_rel * v_gain - x_errgain * (dis_safe - dis_rel)    
+        #     dis_safe = ego_vel* time_gap + default_space
+        #     dis_rel = sqrt(pow(Obstacle[0],2) + pow(Obstacle[1],2))            
+        #     vel_rel = (Obstacle[2] - ego_vel)
+        #     acceleration = vel_rel * v_gain - x_errgain * (dis_safe - dis_rel)    
 
-            out_vel = ego_vel + acceleration           
+        #     out_vel = ego_vel + acceleration           
 
         return out_vel * 3.6
 
