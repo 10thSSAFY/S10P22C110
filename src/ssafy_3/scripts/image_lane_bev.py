@@ -75,7 +75,7 @@ class IMGParser:
         Bird's eye view 를 하기 위한 영역을 지정해야 합니다. 이지미 warping을 위해 영역을 비율로 만들어줘야 합니다.
         self.source_prop = np.float32(
         '''
-        self.source_prop = np.float32([[0.0, 0.90], [0.4, 0.6], [0.6, 0.6], [1.0, 0.90]])
+        self.source_prop = np.float32([[0.0, 0.90], [0.4, 0.58], [0.6, 0.58], [1.0, 0.90]])
 
     def callback(self, msg):
         try:

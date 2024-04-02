@@ -4,7 +4,9 @@
     <node pkg="ssafy_2" type="global_path_pub.py" name="global_path_pub"  />
     <node pkg="ssafy_2" type="local_path_pub.py" name="local_path_pub" />    
     <node pkg="ssafy_2" type="tf_pub.py" name="tf"  />
-    <node pkg="ssafy_3" type="gps_db_upload.py" name="gps_upload" />
+    <node pkg="ssafy_3" type="gps_db_connection.py" name="gps_db_connect" />
+    <node pkg="ssafy_3" type="image_lane_fitting.py" name="image_lane_fitting" />
+    <node pkg="ssafy_3" type="check_path.py" name="check_path" />
     <node pkg="ssafy_3" type="lattice_planner.py" name="lattice_planner" output="screen" args="/Object_topic_to_lidar"/>
     <node pkg="ssafy_3" type="advanced_purepursuit.py" name="advanced_purepursuit"  args="/lattice_path"/>
 
