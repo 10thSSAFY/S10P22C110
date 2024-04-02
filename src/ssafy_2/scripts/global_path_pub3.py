@@ -18,8 +18,8 @@ from nav_msgs.msg import Odometry,Path
 
 
 class global_path_pub :
-    def __init__(self, pkg_name = 'ssafy_2', path_name = 'kcity'):
-        rospy.init_node('global_path_pub', anonymous = True)
+    def __init__(self, pkg_name = 'ssafy_2', path_name = 'kcity_dijkstra'):
+        rospy.init_node('global_path_pub3', anonymous = True)
 
         #TODO: (1) Global Path publisher 선언 및 Global Path 변수 생성 
         '''
@@ -31,7 +31,7 @@ class global_path_pub :
 
         '''
 
-        self.global_path_pub = rospy.Publisher('/global_path', Path, queue_size=10)
+        self.global_path_pub = rospy.Publisher('/global_path3', Path, queue_size=10)
         self.global_path_msg = Path()
         self.global_path_msg.header.frame_id = 'map'
 
