@@ -36,6 +36,7 @@ class GPSUpload:
         if current_time - self.last_upload_time >= 1.0:
             car_lat = gps_msg.latitude
             car_lon = gps_msg.longitude
+            self.upload_car_gps_data(car_lat, car_lon)
 
             if self.patient_lat is not None and self.patient_lon is not None:
                 distance1, distance2 = self.calculate_distance(car_lat, car_lon, float(self.patient_lat), float(self.patient_lon), float(self.dest_lat), float(self.dest_lon))
@@ -52,8 +53,8 @@ class GPSUpload:
             self.last_upload_time = current_time
 
     def upload_car_gps_data(self, lat, lon):
-        query = "UPDATE car SET lat = %s, lon = %s WHERE id = 1"
-        self.cursor.execute(query, (lat, lon))
+        query = "UPDATE cars SET lat = %s, lon = %s WHERE id = 1"
+        self.cursor.execute(query, (str(lat), str(lon)))
         self.connection.commit()
         print("GPS data uploaded to MariaDB")
 
