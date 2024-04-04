@@ -47,10 +47,12 @@ class latticePlanner:
         # launch 파일의 <arg> 태그를 사용하여 예제에 맞게 변수를 설정합니다.
 
         '''
-        arg = rospy.myargv(argv=sys.argv)
-        object_topic_name = arg[1]
+        # arg = rospy.myargv(argv=sys.argv)
+        # object_topic_name = arg[1]
 
-        rospy.Subscriber(object_topic_name, ObjectStatusList, self.object_callback)
+        # rospy.Subscriber(object_topic_name, ObjectStatusList, self.object_callback)
+
+        rospy.Subscriber("/Object_topic", ObjectStatusList, self.object_callback)
 
         # TODO: (1) subscriber, publisher 선언
         '''
@@ -76,21 +78,30 @@ class latticePlanner:
         self.is_status = False
         self.is_obj = False
 
+        self.local_path = Path()
+
         rate = rospy.Rate(50)  # 30hz
         while not rospy.is_shutdown():
 
             if self.is_path and self.is_status and self.is_obj:
-                if self.checkObject(self.local_path, self.object_data):
+                if self.checkObstacleObject(self.local_path, self.object_data):
                     lattice_path = self.latticePlanner(self.local_path, self.status_msg)
-                    lattice_path_index = self.collision_check(self.object_data, lattice_path)
+                    lattice_path_index = self.obstacle_collision_check(self.object_data, lattice_path)
+
+                    # TODO: (7) lattice 경로 메세지 Publish
+                    self.lattice_path_pub.publish(lattice_path[lattice_path_index])
+                elif self.checkPedestrianObject(self.local_path, self.object_data):
+                    lattice_path = self.latticePlanner(self.local_path, self.status_msg)
+                    lattice_path_index = self.pedestrian_collision_check(self.object_data, lattice_path)
 
                     # TODO: (7) lattice 경로 메세지 Publish
                     self.lattice_path_pub.publish(lattice_path[lattice_path_index])
                 else:
                     self.lattice_path_pub.publish(self.local_path)
+
             rate.sleep()
 
-    def checkObject(self, ref_path, object_data):
+    def checkObstacleObject(self, ref_path, object_data):
         # TODO: (2) 경로상의 장애물 탐색
         '''
         # 경로 상에 존재하는 장애물을 탐색합니다.
@@ -117,8 +128,36 @@ class latticePlanner:
                     break
 
         return is_crash
+    
+    def checkPedestrianObject(self, ref_path, object_data):
+        # TODO: (2) 경로상의 장애물 탐색
+        '''
+        # 경로 상에 존재하는 장애물을 탐색합니다.
+        # 경로 상 기준이 되는 지역 경로(local path)에서 일정 거리 이상 가까이 있다면
+        # in_crash 변수를 True 값을 할당합니다.
 
-    def collision_check(self, object_data, out_path):
+        is_crash = False
+        for obstacle in object_data.obstacle_list:
+            for path in ref_path.poses:  
+                dis =                
+                if dis < 2.35: # 장애물의 좌표값이 지역 경로 상의 좌표값과의 직선거리가 2.35 미만일때 충돌이라 판단.
+                    is_crash = True
+                    break
+
+        '''
+        is_crash = False
+        for pedestrian in object_data.pedestrian_list:
+            for path in ref_path.poses:
+                dx = pedestrian.position.x - path.pose.position.x
+                dy = pedestrian.position.y - path.pose.position.y
+                dis = sqrt(dx ** 2 + dy ** 2)
+                if dis < 2.35:
+                    is_crash = True
+                    break
+
+        return is_crash
+
+    def obstacle_collision_check(self, object_data, out_path):
         # TODO: (6) 생성된 충돌회피 경로 중 낮은 비용의 경로 선택
         '''
         # 충돌 회피 경로를 생성 한 이후 가장 낮은 비용의 경로를 선택 합니다.
@@ -138,6 +177,32 @@ class latticePlanner:
                 for path_pos in out_path[path_num].poses:
                     dis = sqrt(pow(obstacle.position.x - path_pos.pose.position.x, 2) + pow(
                         obstacle.position.y - path_pos.pose.position.y, 2))
+                    if dis < 1.5:
+                        lane_weight[path_num] = lane_weight[path_num] + 100
+
+        selected_lane = lane_weight.index(min(lane_weight))
+        return selected_lane
+    
+    def pedestrian_collision_check(self, object_data, out_path):
+        # TODO: (6) 생성된 충돌회피 경로 중 낮은 비용의 경로 선택
+        '''
+        # 충돌 회피 경로를 생성 한 이후 가장 낮은 비용의 경로를 선택 합니다.
+        # lane_weight 에는 기존 경로를 제외하고 좌 우로 3개씩 총 6개의 경로를 가지도록 합니다.
+        # 이 중 장애물이 있는 차선에는 가중치 값을 추가합니다.
+        # 모든 Path를 탐색 후 가장 비용이 낮은 Path를 선택하게 됩니다.
+        # 장애물이 존재하는 차선은 가중치가 추가 되어 높은 비용을 가지게 되기 떄문에 
+        # 최종적으로 가장 낮은 비용은 차선을 선택 하게 됩니다. 
+
+        '''
+
+        selected_lane = -1
+        lane_weight = [3, 2, 1, 1, 2, 3]  # reference path 
+
+        for pedestrian in object_data.pedestrian_list:
+            for path_num in range(len(out_path)):
+                for path_pos in out_path[path_num].poses:
+                    dis = sqrt(pow(pedestrian.position.x - path_pos.pose.position.x, 2) + pow(
+                        pedestrian.position.y - path_pos.pose.position.y, 2))
                     if dis < 1.5:
                         lane_weight[path_num] = lane_weight[path_num] + 100
 
@@ -200,7 +265,7 @@ class latticePlanner:
             local_end_point = det_trans_matrix.dot(world_end_point)
             world_ego_vehicle_position = np.array([[vehicle_pose_x], [vehicle_pose_y], [1]])
             local_ego_vehicle_position = det_trans_matrix.dot(world_ego_vehicle_position)
-            lane_off_set = [-3.0, -1.75, -1, 1, 1.75, 3.0]
+            lane_off_set = [-4.0, -3.0, -2.0, 2.0, 3.0, 4.0]
             local_lattice_points = []
 
             for i in range(len(lane_off_set)):

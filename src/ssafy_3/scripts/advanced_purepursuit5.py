@@ -19,19 +19,21 @@ class pure_pursuit :
     def __init__(self):
         rospy.init_node('pure_pursuit', anonymous=True)
 
-        arg = rospy.myargv(argv=sys.argv)
-        local_path_name = arg[1]
-        rospy.Subscriber(local_path_name, Path, self.path_callback)
+        # arg = rospy.myargv(argv=sys.argv)
+        # local_path_name = arg[1]
+        # rospy.Subscriber(local_path_name, Path, self.path_callback)
 
-        # rospy.Subscriber("/selected_path", Path, self.path_callback)
+        rospy.Subscriber("/lattice_path", Path, self.path_callback)
 
-        rospy.Subscriber("/global_path", Path, self.global_path_callback )
+        rospy.Subscriber("/global_path2", Path, self.global_path_callback )
+        rospy.Subscriber("/global_path4", Path, self.global_path_callback3 )
         rospy.Subscriber("/odom", Odometry, self.odom_callback )
         rospy.Subscriber("/Ego_topic", EgoVehicleStatus , self.status_callback )
         rospy.Subscriber("/Object_topic", ObjectStatusList, self.object_info_callback)
         
         rospy.Subscriber("/check", String, self.message_callback)
         rospy.Subscriber("/cp_distance", String, self.distance_callback)
+        rospy.Subscriber("/dijkstra",String, self.dijkstra_callback)
 
         self.ctrl_cmd_pub = rospy.Publisher("/ctrl_cmd", CtrlCmd, queue_size=10)
 
@@ -42,6 +44,7 @@ class pure_pursuit :
         self.is_odom = False 
         self.is_status = False
         self.is_global_path = False
+        self.is_global_path3 = False
 
         self.is_enter = False
         self.cnt = 0
@@ -51,9 +54,13 @@ class pure_pursuit :
 
         self.check_msg = String()
         self.distance_msg = String()
+        self.dijkstra_msg = String()
 
         self.forward_point = Point()
         self.current_postion = Point()
+
+        self.velocity_list = []
+        self.velocity_list3 = []
 
         self.vehicle_length = 2.6
         self.lfd = 8
@@ -61,13 +68,22 @@ class pure_pursuit :
         self.max_lfd = 30
         self.lfd_gain = 0.79
         self.target_velocity = 50
+        self.target_velocity3 = 50
 
         self.pid = pidControl()
         self.adaptive_cruise_control = AdaptiveCruiseControl(velocity_gain = 0.5, distance_gain = 1, time_gap = 0.8, vehicle_length = 2.7)
         self.vel_planning = velocityPlanning(self.target_velocity/3.6, 0.15)
+        self.vel_planning3 = velocityPlanning(self.target_velocity3/3.6, 0.15)
         while True:
             if self.is_global_path == True:
                 self.velocity_list = self.vel_planning.curvedBaseVelocity(self.global_path, 50)
+                break
+            else:
+                rospy.loginfo('Waiting global path data')
+
+        while True:
+            if self.is_global_path3 == True:
+                self.velocity_list3 = self.vel_planning.curvedBaseVelocity(self.global_path3, 50)
                 break
             else:
                 rospy.loginfo('Waiting global path data')
@@ -88,7 +104,13 @@ class pure_pursuit :
                 local_obs_info = result[5] 
                 
                 self.current_waypoint = self.get_current_waypoint(self.status_msg,self.global_path)
+                # print(self.current_waypoint)
+
+                self.current_waypoint3 = self.get_current_waypoint(self.status_msg,self.global_path3)
+                # print(self.current_waypoint3)
+
                 self.target_velocity = self.velocity_list[self.current_waypoint]*3.6
+                self.target_velocity3 = self.velocity_list3[self.current_waypoint3]*3.6
                 # if self.check_msg == "lane":
                 #     self.target_velocity = 5
 
@@ -116,10 +138,18 @@ class pure_pursuit :
                 self.adaptive_cruise_control.check_object(self.path ,global_npc_info, local_npc_info
                                                                     ,global_ped_info, local_ped_info
                                                                     ,global_obs_info, local_obs_info)
+                
                 self.target_velocity = self.adaptive_cruise_control.get_target_velocity(local_npc_info, local_ped_info, local_obs_info,
                                                                                                         self.status_msg.velocity.x, self.target_velocity/3.6)
-
-                output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6)
+                self.target_velocity3 = self.adaptive_cruise_control.get_target_velocity(local_npc_info, local_ped_info, local_obs_info,
+                                                                                                        self.status_msg.velocity.x, self.target_velocity3/3.6)
+                
+                if self.dijkstra_msg == String("changed"):
+                    print("changed")
+                    output = self.pid.pid(self.target_velocity3,self.status_msg.velocity.x*3.6)
+                else:
+                    print("not")
+                    output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6)
                 
                 if self.check_msg == String("lane") and output > 0:
                     output = output * 0.2
@@ -149,9 +179,11 @@ class pure_pursuit :
     def message_callback(self,msg):
         self.check_msg = msg
 
-
     def distance_callback(self,msg):
         self.distance_msg = msg
+
+    def dijkstra_callback(self,msg):
+        self.dijkstra_msg = msg
 
     def path_callback(self,msg):
         self.is_path=True
@@ -171,6 +203,10 @@ class pure_pursuit :
     def global_path_callback(self,msg):
         self.global_path = msg
         self.is_global_path = True
+    
+    def global_path_callback3(self,msg):
+        self.global_path3 = msg
+        self.is_global_path3 = True
 
     def object_info_callback(self,data): 
         self.is_object_info = True
