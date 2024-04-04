@@ -11,6 +11,7 @@
     - Docker version 26.0.0
 - Jenkins
     - Jenkins 2.440.2
+    
 ### 프레임워크 및 모듈
 - Server
     - Spring boot 3.2.4
