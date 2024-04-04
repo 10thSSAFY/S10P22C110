@@ -10,6 +10,6 @@ services:
     image: 2am_server
     container_name: server
     build:
-      context: ./server
+      context: ./server/autodriving
     ports:
-      - "3002:3001"
+      - "3000:3000"
