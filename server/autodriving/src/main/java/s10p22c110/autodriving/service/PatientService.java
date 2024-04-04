@@ -13,18 +13,18 @@ import s10p22c110.autodriving.repository.PatientRepository;
 public class PatientService {
 
     @Autowired
-    private PatientRepository departualRepository;
+    private PatientRepository patientRepository;
 
-    public Patient saveDepartual(Patient departual) {
-        if (departual == null) {
-            throw new IllegalArgumentException("Input departual cannot be null.");
+    public Patient savePatient(Patient patient) {
+        if (patient == null) {
+            throw new IllegalArgumentException("Input patient cannot be null.");
         }
-        return departualRepository.save(departual);
+        return patientRepository.save(patient);
     }
 
     // 모든 Patient 정보 조회
     public List<Patient> findAllPatients() {
-        return departualRepository.findAll();
+        return patientRepository.findAll();
     }
 
     // 특정 id를 가진 Patient 정보 조회
@@ -32,7 +32,7 @@ public class PatientService {
         if (id == null) {
             throw new IllegalArgumentException("ID cannot be null.");
         }
-        Optional<Patient> patient = departualRepository.findById(id);
+        Optional<Patient> patient = patientRepository.findById(id);
         return patient.orElse(null);
     }
 
@@ -41,12 +41,12 @@ public class PatientService {
         if (id == null) {
             throw new IllegalArgumentException("ID cannot be null.");
         }
-        Optional<Patient> patientOptional = departualRepository.findById(id);
+        Optional<Patient> patientOptional = patientRepository.findById(id);
         if (patientOptional.isPresent()) {
             Patient patient = patientOptional.get();
             patient.setLat(lat);
             patient.setLon(lon);
-            return departualRepository.save(patient);
+            return patientRepository.save(patient);
         } else {
             throw new IllegalArgumentException("Patient with ID " + id + " not found.");
         }

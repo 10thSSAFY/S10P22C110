@@ -1,5 +1,6 @@
 package s10p22c110.autodriving.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,12 @@ public class CarController {
     public ResponseEntity<Car> createCar(@RequestBody Car car) {
         Car savedCar = carService.saveCar(car);
         return ResponseEntity.ok(savedCar);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Car>> getAllCars() {
+        List<Car> cars = carService.findAllCars();
+        return ResponseEntity.ok(cars);
     }
 
     // 특정 id를 가진 Patient 정보 조회

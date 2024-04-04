@@ -30,7 +30,7 @@ public class ArriveService {
 
         double distance = calculateDistance(patientLat, patientLon, carLat, carLon);
 
-        // 10미터 이내로 가까워졌는지 확인
+        // 50미터 이내로 가까워졌는지 확인
         return distance <= 50;
     }
 

@@ -1,5 +1,6 @@
 package s10p22c110.autodriving.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,9 @@ public class CarService {
     }
 
     // 모든 Car 정보 조회
-    // ... 생략 ...
+    public List<Car> findAllCars() {
+        return carRepository.findAll();
+    }
     
     // 특정 id를 가진 Car 정보 조회
     public Car findCarById(Long id) {

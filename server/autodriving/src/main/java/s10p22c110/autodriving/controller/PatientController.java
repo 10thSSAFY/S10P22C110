@@ -21,24 +21,24 @@ import s10p22c110.autodriving.service.PatientService;
 public class PatientController {
 
     @Autowired
-    private PatientService departualService;
+    private PatientService patientService;
 
     @PostMapping
-    public ResponseEntity<Patient> createDepartual(@RequestBody Patient departual) {
-        Patient savedDepartual = departualService.saveDepartual(departual);
+    public ResponseEntity<Patient> createDepartual(@RequestBody Patient patient) {
+        Patient savedDepartual = patientService.savePatient(patient);
         return ResponseEntity.ok(savedDepartual);
     }
 
     @GetMapping
     public ResponseEntity<List<Patient>> getAllPatients() {
-        List<Patient> patients = departualService.findAllPatients();
+        List<Patient> patients = patientService.findAllPatients();
         return ResponseEntity.ok(patients);
     }
 
     // 특정 id를 가진 Patient 정보 조회
     @GetMapping("/{id}")
     public ResponseEntity<Patient> getPatientById(@PathVariable Long id) {
-        Patient patient = departualService.findPatientById(id);
+        Patient patient = patientService.findPatientById(id);
         return ResponseEntity.ok(patient);
     }
 
@@ -47,7 +47,7 @@ public class PatientController {
     public ResponseEntity<Patient> updatePatientLocation(@PathVariable Long id, @RequestBody Map<String, String> location) {
         String lat = location.get("lat");
         String lon = location.get("lon");
-        Patient updatedPatient = departualService.updatePatientLocation(id, lat, lon);
+        Patient updatedPatient = patientService.updatePatientLocation(id, lat, lon);
         return ResponseEntity.ok(updatedPatient);
     }
 }
