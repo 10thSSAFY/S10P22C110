@@ -15,11 +15,12 @@ class LocalPathPub:
         self.num = -1
         self.nowIndex = String()
         self.traffic_light_list = [
-            ["C119BS010001", 57.6481438244, 1179.60217104, 0.0],
-            ["C119BS010021", 85.505508478, 1228.70434389, 0.0],
-            ["C119BS010025", 136.494278008, 1349.59435854, 0.0],
-            ["C119BS010028", 140.579025324, 1457.47680482, 0.0],
-            ["C119BS010033", 139.238388117, 1595.86083803, 0.0]]
+            ["C119BS010024", 75.6222687308,    1250.58971986,    0.0],
+            ["C119BS010025", 136.604752,    1351.215942,    -0.511265],
+            ["C119BS010028", 140.65213, 1458.177124,    -0.511265],
+            ["C119BS010033", 139.172119,    1596.130249,    -0.511265],
+            ]
+        
         
         rospy.init_node('traffic_listener', anonymous=True)
         rospy.Subscriber("/GetTrafficLightStatus", GetTrafficLightStatus, self.traffic_light_callback)
@@ -33,13 +34,21 @@ class LocalPathPub:
         
         self.nowIndex = data.trafficLightIndex
         print(self.nowIndex)
-        for i in range(5):
-            if self.traffic_light_list[i][0] == self.nowIndex:
-                if data.trafficLightStatus == 1 or data.trafficLightStatus == 4:
-                    self.msg = "red_light"
-                    self.num = i
-                else:
-                    self.msg = "green_light"
+        for i in range(4):
+            if i == 0:
+                if self.traffic_light_list[i][0] == self.nowIndex:
+                    if data.trafficLightStatus == 1 or data.trafficLightStatus == 4 or data.trafficLightStatus == 16:
+                        self.msg = "red_light"
+                        self.num = i
+                    else:
+                        self.msg = "green_light"
+            else :
+                if self.traffic_light_list[i][0] == self.nowIndex:
+                    if data.trafficLightStatus == 1 or data.trafficLightStatus == 4:
+                        self.msg = "red_light"
+                        self.num = i
+                    else:
+                        self.msg = "green_light"
 
         # rospy.loginfo(self.msg)
         # print(type(self.msg))
