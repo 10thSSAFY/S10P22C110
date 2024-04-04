@@ -9,7 +9,7 @@ from math import cos,sin,pi,sqrt,pow,atan2
 from geometry_msgs.msg import Point,PoseWithCovarianceStamped
 from nav_msgs.msg import Odometry,Path
 from morai_msgs.msg import CtrlCmd,EgoVehicleStatus,ObjectStatusList
-from std_msgs.msg import String, Int32
+from std_msgs.msg import String
 import numpy as np
 import tf
 from tf.transformations import euler_from_quaternion,quaternion_from_euler
@@ -19,22 +19,20 @@ class pure_pursuit :
     def __init__(self):
         rospy.init_node('pure_pursuit', anonymous=True)
 
-        # arg = rospy.myargv(argv=sys.argv)
-        # local_path_name = arg[1]
-        # rospy.Subscriber(local_path_name, Path, self.path_callback)
+        arg = rospy.myargv(argv=sys.argv)
+        local_path_name = arg[1]
+        rospy.Subscriber(local_path_name, Path, self.path_callback)
 
-        rospy.Subscriber("/selected_path", Path, self.path_callback)
+        # rospy.Subscriber("/lattice_path", Path, self.path_callback)
 
-        rospy.Subscriber("/global_path", Path, self.global_path_callback )
+        rospy.Subscriber("/global_path2", Path, self.global_path_callback )
         rospy.Subscriber("/odom", Odometry, self.odom_callback )
         rospy.Subscriber("/Ego_topic", EgoVehicleStatus , self.status_callback )
         rospy.Subscriber("/Object_topic", ObjectStatusList, self.object_info_callback)
         
         rospy.Subscriber("/check", String, self.message_callback)
         rospy.Subscriber("/cp_distance", String, self.distance_callback)
-        rospy.Subscriber("/check_traffic_light", String, self.traffic_light_callback)
-        rospy.Subscriber("/check_traffic_light_num", Int32, self.traffic_light_num_callback )
-        
+
         self.ctrl_cmd_pub = rospy.Publisher("/ctrl_cmd", CtrlCmd, queue_size=10)
 
         self.ctrl_cmd_msg = CtrlCmd()
@@ -54,12 +52,8 @@ class pure_pursuit :
         self.check_msg = String()
         self.distance_msg = String()
 
-        self.check_traffic_light = String()
-        self.check_traffic_light_num = 0
-        self.light_flag = 0
-
         self.forward_point = Point()
-        self.current_position = Point()
+        self.current_postion = Point()
 
         self.vehicle_length = 2.6
         self.lfd = 8
@@ -71,16 +65,6 @@ class pure_pursuit :
         self.pid = pidControl()
         self.adaptive_cruise_control = AdaptiveCruiseControl(velocity_gain = 0.5, distance_gain = 1, time_gap = 0.8, vehicle_length = 2.7)
         self.vel_planning = velocityPlanning(self.target_velocity/3.6, 0.15)
-
-        self.traffic_light_list = [
-            ["C119BS010001", 57.919277,    1179.451172,    -0.511265],
-            ["C119BS010021", 85.439812,    1228.876831,    -0.511265],
-            ["C119BS010025", 136.55632,    1349.680542,    -0.511265],
-            ["C119BS010028", 140.653214, 1457.599365,    -0.511265],
-            ["C119BS010033", 139.198792,    1595.544312,    -0.511265],
-            ]
-        
-        
         while True:
             if self.is_global_path == True:
                 self.velocity_list = self.vel_planning.curvedBaseVelocity(self.global_path, 50)
@@ -94,7 +78,7 @@ class pure_pursuit :
                 prev_time = time.time()
 
                 # global_obj,local_obj
-                result = self.calc_vaild_obj([self.current_position.x,self.current_position.y,self.vehicle_yaw],self.object_data)
+                result = self.calc_vaild_obj([self.current_postion.x,self.current_postion.y,self.vehicle_yaw],self.object_data)
                 
                 global_npc_info = result[0] 
                 local_npc_info = result[1] 
@@ -122,49 +106,7 @@ class pure_pursuit :
                         self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
                         continue
 
-                print(self.check_traffic_light)
-
-                if self.light_flag == 0:
-                        # output = self.pid.pid(self.target_velocity,self.status_msg.velocity.x*3.6)
-                        output = self.pid.pid(0, 0)
-                        steering = self.calc_pure_pursuit()
-                        if self.is_look_forward_point :
-                            self.ctrl_cmd_msg.steering = steering
-                            # print("streeing!")
-                        else : 
-                            rospy.loginfo("no found forward point")
-                            self.ctrl_cmd_msg.steering = 0.0
-
-                if self.check_traffic_light == String("red_light"):
-                    self.light_position_x = self.traffic_light_list[int(self.check_traffic_light_num.data)][1]
-                    self.light_position_y = self.traffic_light_list[int(self.check_traffic_light_num.data)][2]
-                    self.dist = sqrt(pow(self.current_position.x - self.light_position_x, 2) + pow(self.current_position.y - self.light_position_y, 2))
-
-                    if output > 0.0:
-                        self.ctrl_cmd_msg.accel = output
-                        self.ctrl_cmd_msg.brake = 0.0
-                    else:
-                        self.ctrl_cmd_msg.accel = 0.0
-                        self.ctrl_cmd_msg.brake = -output
-
-                    if self.dist < 20.0:
-                        self.light_flag = 1
-                        print(output)
-                        # steering = self.calc_pure_pursuit()                    
-                        self.ctrl_cmd_msg.brake = 1.0
-                        self.ctrl_cmd_msg.accel = 0.0
-                        # self.ctrl_cmd_msg.steering = steering
-                        self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
-                        continue
-                    else:
-                        self.light_flag = 0
-                    # continue
-                else:
-                    self.light_flag = 0
-
-
                 steering = self.calc_pure_pursuit()
-
                 if self.is_look_forward_point :
                     self.ctrl_cmd_msg.steering = steering
                 else : 
@@ -199,15 +141,6 @@ class pure_pursuit :
 
                 if self.check_msg == String("lattice") and self.cnt:
                     self.cnt = 0
-                
-                if self.distance_msg == String("near") and self.pause_time < 450:
-                    self.pause_time = self.pause_time + 1
-                    self.ctrl_cmd_msg.accel = 0.0
-                    self.ctrl_cmd_msg.brake = 1
-        
-                if self.distance_msg == String("stop"):
-                    self.ctrl_cmd_msg.accel = 0.0
-                    self.ctrl_cmd_msg.brake = 1
 
                 self.ctrl_cmd_pub.publish(self.ctrl_cmd_msg)
 
@@ -216,11 +149,6 @@ class pure_pursuit :
     def message_callback(self,msg):
         self.check_msg = msg
 
-    def traffic_light_callback(self,msg):
-        self.check_traffic_light = msg
-
-    def traffic_light_num_callback(self,msg):
-        self.check_traffic_light_num = msg
 
     def distance_callback(self,msg):
         self.distance_msg = msg
@@ -233,8 +161,8 @@ class pure_pursuit :
         self.is_odom=True
         odom_quaternion=(msg.pose.pose.orientation.x,msg.pose.pose.orientation.y,msg.pose.pose.orientation.z,msg.pose.pose.orientation.w)
         _,_,self.vehicle_yaw=euler_from_quaternion(odom_quaternion)
-        self.current_position.x = msg.pose.pose.position.x
-        self.current_position.y = msg.pose.pose.position.y
+        self.current_postion.x=msg.pose.pose.position.x
+        self.current_postion.y=msg.pose.pose.position.y
 
     def status_callback(self,msg): 
         self.is_status=True
@@ -320,7 +248,7 @@ class pure_pursuit :
         self.lfd = min(max(self.lfd, self.min_lfd), self.max_lfd)
         # rospy.loginfo(self.lfd)
         
-        vehicle_position=self.current_position
+        vehicle_position=self.current_postion
         self.is_look_forward_point= False
 
         translation = [vehicle_position.x, vehicle_position.y]
@@ -461,9 +389,6 @@ class AdaptiveCruiseControl:
                         dx = global_obs_info[i][1] - path.pose.position.x
                         dy = global_obs_info[i][2] - path.pose.position.y
                         dis = sqrt(dx**2 + dy**2)
-                        print("--------------------------")
-                        print(dis)
-                        print("--------------------------")
                         if dis<4.35:
                             rel_distance = dis             
                             if rel_distance < min_rel_distance:

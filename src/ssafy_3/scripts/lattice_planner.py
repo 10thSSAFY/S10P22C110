@@ -83,23 +83,22 @@ class latticePlanner:
         rate = rospy.Rate(50)  # 30hz
         while not rospy.is_shutdown():
 
-            # if self.is_path and self.is_status and self.is_obj:
-            #     if self.checkObstacleObject(self.local_path, self.object_data):
-            #         lattice_path = self.latticePlanner(self.local_path, self.status_msg)
-            #         lattice_path_index = self.obstacle_collision_check(self.object_data, lattice_path)
+            if self.is_path and self.is_status and self.is_obj:
+                if self.checkObstacleObject(self.local_path, self.object_data):
+                    lattice_path = self.latticePlanner(self.local_path, self.status_msg)
+                    lattice_path_index = self.obstacle_collision_check(self.object_data, lattice_path)
 
-            #         # TODO: (7) lattice 경로 메세지 Publish
-            #         self.lattice_path_pub.publish(lattice_path[lattice_path_index])
-            #     elif self.checkPedestrianObject(self.local_path, self.object_data):
-            #         lattice_path = self.latticePlanner(self.local_path, self.status_msg)
-            #         lattice_path_index = self.pedestrian_collision_check(self.object_data, lattice_path)
+                    # TODO: (7) lattice 경로 메세지 Publish
+                    self.lattice_path_pub.publish(lattice_path[lattice_path_index])
+                elif self.checkPedestrianObject(self.local_path, self.object_data):
+                    lattice_path = self.latticePlanner(self.local_path, self.status_msg)
+                    lattice_path_index = self.pedestrian_collision_check(self.object_data, lattice_path)
 
-            #         # TODO: (7) lattice 경로 메세지 Publish
-            #         self.lattice_path_pub.publish(lattice_path[lattice_path_index])
-            #     else:
-            #         self.lattice_path_pub.publish(self.local_path)
+                    # TODO: (7) lattice 경로 메세지 Publish
+                    self.lattice_path_pub.publish(lattice_path[lattice_path_index])
+                else:
+                    self.lattice_path_pub.publish(self.local_path)
 
-            self.lattice_path_pub.publish(self.local_path)
             rate.sleep()
 
     def checkObstacleObject(self, ref_path, object_data):
