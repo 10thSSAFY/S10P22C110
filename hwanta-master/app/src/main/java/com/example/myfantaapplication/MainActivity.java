@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                                 // Call the sendPostRequest method with latitude and longitude
+                                // sendPostRequest(latitude, longitude);
                                 sendPostRequest(latitude, longitude);
 
                             }
